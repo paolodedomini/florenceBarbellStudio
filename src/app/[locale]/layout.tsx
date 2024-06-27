@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oswald, Outfit } from "next/font/google";
 import "@/sass/all.scss";
 import SmoothScrolling from "@/components/scroll/smoothScrolling";
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
@@ -9,8 +9,18 @@ import { locales } from "../../configTranslations";
 import { unstable_setRequestLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["200", "400", "700"],
+  variable: "--font-oswald",
+});
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["200", "400", "700"],
+  variable: "--font-outfit",
+});
 
+/** FUNZIONE NEXT PER STATICIZZARE LE PAGINE CON NEXT-INTL */
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -40,7 +50,7 @@ export default async function RootLayout({
         {/* COMPONENTE PER INSERIRE I META JSONLD PER GOOGLE  */}
         <JsonldMetaData metadata={meta} />
       </head>
-      <body className={inter.className}>
+      <body className={`${oswald.variable} ${outfit.variable}`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Nav />
           <SmoothScrolling>{children}</SmoothScrolling>

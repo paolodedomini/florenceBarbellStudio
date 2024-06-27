@@ -12,9 +12,11 @@ type Tdata = {
 
 function TabNav({
   data,
+  activeTab,
   setActiveTab,
 }: {
   data: Tdata[] | undefined;
+  activeTab?: number | undefined;
   setActiveTab: React.Dispatch<React.SetStateAction<number>>;
 }) {
   function getListData(data: Tdata[]) {
@@ -25,6 +27,7 @@ function TabNav({
             setActiveTab(index);
           }}
           key={index}
+          className={`${activeTab === index ? style.active : ""}`}
         >
           {item.titolo}
         </li>
@@ -57,27 +60,30 @@ function TabBody({ tabData }: { tabData: Tdata | undefined }) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, transition: { duration: 0.3 } }}
             >
-              <Image src={tabData.image} alt={tabData?.titolo} layout="fill" />
+              <Image
+                src={tabData.image}
+                alt={tabData?.titolo}
+                layout="fill"
+                quality={100}
+              />
             </motion.div>
           ) : (
             <div>no image</div>
           )}
           <div className={style.tabBody__content}>
             <motion.h2
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0, transition: { delay: 0.2 } }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
               exit={{ opacity: 0, transition: { duration: 0.3 } }}
             >
               {tabData?.titolo}
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0, transition: { delay: 0.4 } }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}
               exit={{ opacity: 0, transition: { duration: 0.3 } }}
-            >
-              {tabData?.testo}
-            </motion.p>
-            <a href={tabData?.link}>Link</a>
+              dangerouslySetInnerHTML={{ __html: tabData?.testo }}
+            />
           </div>
         </motion.div>
       )}
@@ -97,7 +103,7 @@ function Tabs({ data }: { data: Tdata[] | undefined }) {
   if (!data) return null;
   return (
     <div className={style.tabs}>
-      <TabNav data={data} setActiveTab={setActiveTab} />
+      <TabNav data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
       <TabBody tabData={tabData} />
     </div>
   );

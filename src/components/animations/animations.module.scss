@@ -1,0 +1,25 @@
+.titleAnimationsWrapper {
+  font-size: 8.8rem;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  @include title();
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  overflow: hidden;
+  span {
+    display: inline-block;
+    transform-origin: left;
+    &.word {
+      margin-right: 1rem;
+    }
+  }
+  .sub {
+    font-size: 2rem;
+    text-align: right;
+    top: -31px;
+    position: relative;
+    letter-spacing: -1px;
+    right: 18px;
+  }
+}

@@ -1,5 +1,11 @@
 body {
   margin: 0;
+  @include paragraph();
+}
+h1,
+h2,
+h3 {
+  @include title();
 }
 * {
   box-sizing: border-box;
@@ -17,4 +23,10 @@ ul {
 .leaflet-top,
 .leaflet-bottom {
   z-index: 400 !important;
+}
+.wrapperFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

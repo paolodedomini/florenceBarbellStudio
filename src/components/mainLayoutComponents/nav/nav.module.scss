@@ -3,7 +3,7 @@
   padding: 0 1rem;
   z-index: 200;
   &__home {
-    background: linear-gradient(rgb(10, 43, 82) 7%, rgb(50 92 175 / 0%) 100%);
+    background: linear-gradient(rgb(3, 17, 33) 7%, rgb(50 92 175 / 0%) 100%);
     .mainNavBar {
       padding-bottom: 5rem;
       a {
@@ -31,7 +31,7 @@
   font-size: $size-navbar;
   align-items: center;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
   &__home {
     ul li a {

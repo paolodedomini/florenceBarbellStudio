@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import style from "./HeroVideo.module.scss";
-import { easeOut, motion } from "framer-motion";
+import style from "./Hero.module.scss";
+import { easeOut, motion, useTransform, useScroll } from "framer-motion";
 import { useState } from "react";
 import LoaderSite from "@/components/loaders/loader";
 import { usePathname } from "next/navigation";
@@ -18,7 +18,15 @@ import { useLocale } from "next-intl";
  * definisce il testo da visualizzare, può essere un oggetto complesso
  */
 
-function HeroVideo({ videoURL, data }: { videoURL: string; data: any }) {
+function HeroVideo({
+  typeOfData,
+  URL,
+  data,
+}: {
+  URL: string;
+  data: any;
+  typeOfData: "video" | "image";
+}) {
   const isHome = usePathname() === "/" + useLocale();
 
   const container = {
@@ -26,7 +34,7 @@ function HeroVideo({ videoURL, data }: { videoURL: string; data: any }) {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 1,
+        delayChildren: 0.5,
         staggerChildren: 0.5,
       },
     },
@@ -45,6 +53,9 @@ function HeroVideo({ videoURL, data }: { videoURL: string; data: any }) {
   };
 
   const [loading, setLoading] = useState(true);
+
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 0.3], [0, -500]);
   if (!isHome) {
     return null;
   }
@@ -68,30 +79,50 @@ function HeroVideo({ videoURL, data }: { videoURL: string; data: any }) {
             stroke="white"
           />
         </motion.svg>
-        <video autoPlay loop muted playsInline className={style.hero__video}>
-          <source src={videoURL} type="video/mp4" />
+        {typeOfData === "video" && (
+          <>
+            {" "}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={style.hero__video}
+            >
+              <source src={URL} type="video/mp4" />
+              <Image
+                className={style.hero__image}
+                src={"/image/mainImage.jpg"}
+                layout="fill"
+                alt="Immagine Principale HomePage"
+                onLoadingComplete={() => setLoading(false)}
+                priority
+              />
+            </video>
+            <div className={style.hero__wrapperImg}>
+              <Image
+                className={style.hero__image}
+                src={"/image/mainImage.jpg"}
+                layout="fill"
+                alt="Immagine Principale HomePage"
+                onLoadingComplete={() => setLoading(false)}
+                priority
+              />
+              {loading && <LoaderSite loading={loading} />}
+            </div>
+          </>
+        )}
+        {typeOfData === "image" && (
           <Image
-            className={style.hero__image}
-            src={"/image/mainImage.jpg"}
+            className={style.hero__mainImage}
+            src={URL}
+            alt="heroImage"
             layout="fill"
-            alt="Immagine Principale HomePage"
-            onLoadingComplete={() => setLoading(false)}
-            priority
           />
-        </video>
+        )}
       </div>
-      <div className={style.hero__wrapperImg}>
-        <Image
-          className={style.hero__image}
-          src={"/image/mainImage.jpg"}
-          layout="fill"
-          alt="Immagine Principale HomePage"
-          onLoadingComplete={() => setLoading(false)}
-          priority
-        />
-        {loading && <LoaderSite loading={loading} />}
-      </div>
-      <div className={style.hero__text}>
+
+      <motion.div className={style.hero__text} style={{ y }}>
         <motion.ul variants={container} initial="hidden" animate="show">
           {data.list.map((listItem: string, index: number) => (
             <motion.li key={index} variants={item}>
@@ -99,7 +130,15 @@ function HeroVideo({ videoURL, data }: { videoURL: string; data: any }) {
             </motion.li>
           ))}
         </motion.ul>{" "}
-      </div>
+        <motion.div
+          className={style.hero__text__quoteBy}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3 }}
+        >
+          {data.quoteBy}
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

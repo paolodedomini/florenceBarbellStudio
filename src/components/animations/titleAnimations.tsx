@@ -1,10 +1,22 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import style from "./titleAnimations.module.scss";
+import { delay, easeInOut, motion } from "framer-motion";
+import style from "./animations.module.scss";
+import { easeIn } from "framer-motion/dom";
 
-function TitleAnimations({ testo }: { testo: string }) {
-  function testoToArray(testo: string) {
+function TitleAnimations({
+  testo,
+  subtesto,
+  animation,
+}: {
+  testo: string;
+  subtesto?: string;
+  animation: "letter" | "word";
+}) {
+  function testoToArray(testo: string, animation: "letter" | "word") {
+    if (animation === "word") {
+      return testo.split(" ");
+    }
     return testo.split("");
   }
 
@@ -13,36 +25,46 @@ function TitleAnimations({ testo }: { testo: string }) {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 1,
-        staggerChildren: 0.5,
+        delayChildren: 0.2,
+        staggerChildren: animation === "word" ? 0.2 : 0.03,
       },
     },
   };
 
   const letter = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 1, y: 200 },
     show: {
       opacity: 1,
+
       y: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
+        easeIn,
       },
     },
   };
   return (
     <motion.div
-      style={{ color: "black" }}
+      className={style.titleAnimationsWrapper}
       variants={container}
       initial="hidden"
       whileInView="show"
     >
-      {testoToArray(testo).map((item, index) => {
+      {testoToArray(testo, animation).map((item, index) => {
+        if (item === " ") {
+          return <span key={index}>&nbsp;</span>;
+        }
         return (
-          <motion.span variants={letter} key={index}>
+          <motion.span
+            className={`${animation === "word" && style.word}`}
+            variants={letter}
+            key={index}
+          >
             {item}
           </motion.span>
         );
       })}
+      <div className={style.sub}>{subtesto}</div>
     </motion.div>
   );
 }

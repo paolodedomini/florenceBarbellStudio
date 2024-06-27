@@ -6,10 +6,11 @@
         "link": "Vai alla documentazione",
         "linkURL": "https://vuejs.org/v2/guide/",
         "list": [
-            "Elemento 1",
-            "Elemento 2",
-            "Elemento 3"
-        ]
+            "CITIUS!",
+            "ALTIUS!",
+            "FORTIUS!"
+        ],
+        "quoteBy": "Pierre de Coubertin"
     },
     "en": {
         "titolo": "Hello",

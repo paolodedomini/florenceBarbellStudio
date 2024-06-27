@@ -3,24 +3,25 @@
         "titolo": "sito web",
         "tabs": [
             {
-                "titolo": "tab1",
-                "testo": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                "image": "/image/mainimage.jpg",
+                "titolo": "Personal training, Riatletizzazione e Small Group",
+                "testo": "<strong>Il weightlifting </strong> e il <strong>powerlifting</strong> sono discipline di sollevamento pesi che richiedono forza, tecnica e determinazione. <br/> Il weightlifting si concentra sull'esecuzione di due movimenti principali: lo snatch (sollevamento da terra sopra la testa in un unico movimento fluido) e il clean and jerk (girata al petto da terra e spinta sopra la testa in due fasi separate).<br/> Il powerlifting, invece, si concentra su tre movimenti principali: lo squat (squat con bilanciere), il bench press (distensione su panca) e il deadlift (stacco da terra).<br/>  Entrambe le discipline sono indicate per atleti di ogni livello, dai principianti che vogliono imparare le basi corrette dei movimenti, agli atleti esperti che cercano di migliorare le proprie performance o partecipare a competizioni. <br/> I programmi di coaching personalizzati possono essere adattati alle esigenze e alle capacità individuali di ogni persona.",
+                "image": "/image/imagetab1.jpg",
                 "link": "index.html"
             },
             {
-                "titolo": "tab2",
-                "testo": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                "image": "/image/mainimage2.jpg",
+                "titolo": "Weightlifting, Powerlifting",
+                "testo": "<strong>Il weightlifting </strong> e il <strong>powerlifting</strong> sono discipline di sollevamento pesi che richiedono forza, tecnica e determinazione. <br/> Il weightlifting si concentra sull'esecuzione di due movimenti principali: lo snatch (sollevamento da terra sopra la testa in un unico movimento fluido) e il clean and jerk (girata al petto da terra e spinta sopra la testa in due fasi separate).<br/> Il powerlifting, invece, si concentra su tre movimenti principali: lo squat (squat con bilanciere), il bench press (distensione su panca) e il deadlift (stacco da terra).<br/>  Entrambe le discipline sono indicate per atleti di ogni livello, dai principianti che vogliono imparare le basi corrette dei movimenti, agli atleti esperti che cercano di migliorare le proprie performance o partecipare a competizioni. <br/> I programmi di coaching personalizzati possono essere adattati alle esigenze e alle capacità individuali di ogni persona.",
+                "image": "/image/imagetab1.jpg",
                 "link": "contatti.html"
             },
             {
-                "titolo": "tab3",
-                "testo": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                "image": "/image/mainimage.jpg",
+                "titolo": "Preparazione atletica",
+                "testo": "<strong>Il weightlifting </strong> e il <strong>powerlifting</strong> sono discipline di sollevamento pesi che richiedono forza, tecnica e determinazione. <br/> Il weightlifting si concentra sull'esecuzione di due movimenti principali: lo snatch (sollevamento da terra sopra la testa in un unico movimento fluido) e il clean and jerk (girata al petto da terra e spinta sopra la testa in due fasi separate).<br/> Il powerlifting, invece, si concentra su tre movimenti principali: lo squat (squat con bilanciere), il bench press (distensione su panca) e il deadlift (stacco da terra).<br/>  Entrambe le discipline sono indicate per atleti di ogni livello, dai principianti che vogliono imparare le basi corrette dei movimenti, agli atleti esperti che cercano di migliorare le proprie performance o partecipare a competizioni. <br/> I programmi di coaching personalizzati possono essere adattati alle esigenze e alle capacità individuali di ogni persona.",
+                "image": "/image/imagetab1.jpg",
                 "link": "contatti.html"
             }
-        ]
+        ],
+        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi."
     },
     "en": {
         "titolo": "web site",
@@ -43,6 +44,7 @@
                 "image": "/image/mainimage.jpg",
                 "link": "contatti.html"
             }
-        ]
+        ],
+        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi."
     }
 }

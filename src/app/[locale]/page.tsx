@@ -1,4 +1,4 @@
-import HeroVideo from "@/components/heros/video/HeroVideo";
+import HeroVideo from "@/components/heros/Hero";
 import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
@@ -8,11 +8,11 @@ import staffData from "../../../public/data/staff.json";
 import Parallax from "@/components/parallax/parallax";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
 import LeafletMain from "@/components/map/Leaflet";
-import SliderTimer from "@/components/sliders/sliderTimer";
+
 import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
 import TitleAnimations from "@/components/animations/titleAnimations";
-
+import Image from "next/image";
 /**
  * PAGINA
  * Utilizzare le pagine per fetchare i dati e passarli ai componenti
@@ -35,28 +35,51 @@ export default async function Home({
   };
   return (
     <main className={styles.main}>
-      <HeroVideo videoURL={"/video/video.mp4"} data={HeroDataLang} />
-      <TitleAnimations testo="Mannaggia" />
-      <AnimatedSection>
-        <SliderTimer
-          data={[
-            { image: "/image/mainimage.jpg", titolo: "mannaggia" },
-            {
-              image: "/image/mainimage2.jpg",
-              titolo: "mannaggia mannaggia",
-            },
-          ]}
+      <HeroVideo
+        typeOfData="image"
+        URL={"/image/hero.jpg"}
+        data={HeroDataLang}
+      />
+      <div className={"wrapperFlex"}>
+        <TitleAnimations testo="Florence Barbell Studio is" animation="word" />
+        <Image
+          src="/image/frecciatitoli.svg"
+          alt="test"
+          width="16"
+          height="111"
         />
-      </AnimatedSection>
-      <Parallax imageURL="/image/mainimage2.jpg" alt="test" height="300px" />
+      </div>
+
       <AnimatedSection>
         <Tabs data={homeData[locale as keyof typeof homeData].tabs} />
       </AnimatedSection>
       <AnimatedSection>
-        <LeafletMain address={address} />
+        <Parallax
+          testo={homeData[locale as keyof typeof homeData].parallax}
+          imageURL="/image/parallaxhome.jpg"
+          alt="test"
+          height="400px"
+        />{" "}
       </AnimatedSection>
+      <div className={"wrapperFlex"}>
+        <TitleAnimations
+          testo="Florence Barbell GYM"
+          subtesto="300mt2 di torture"
+          animation="word"
+        />
+
+        <Image
+          src="/image/frecciatitoli.svg"
+          alt="test"
+          width="16"
+          height="111"
+        />
+      </div>
       <AnimatedSection>
         <Staff data={staffData[locale as keyof typeof homeData]} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <LeafletMain address={address} />
       </AnimatedSection>
     </main>
   );

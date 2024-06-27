@@ -15,6 +15,12 @@ $grey: #c8c8c8;
 $size-navbar: 14px;
 $size-p: 22px;
 $pageSubtitle: 32px;
+@mixin title() {
+  font-family: var(--font-oswald);
+}
+@mixin paragraph() {
+  font-family: var(--font-outfit);
+}
 
 /*MEDIA QUERY*/
 $phone: "only screen and (max-width : 460px)";

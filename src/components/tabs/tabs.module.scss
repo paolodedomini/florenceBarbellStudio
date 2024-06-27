@@ -1,14 +1,20 @@
 .tabs {
-  max-width: 1560px;
+  max-width: 1650px;
   margin: 0 auto;
+  @include title();
   .tabNav {
     ul {
       display: flex;
+      justify-content: space-between;
       gap: 1rem;
+
       li {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem;
         cursor: pointer;
       }
     }
@@ -16,14 +22,37 @@
   .tabBody {
     display: flex;
     gap: 2rem;
+    margin-top: 3rem;
     &__content {
       flex: 1;
+      h2 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 2rem;
+      }
+      p {
+        @include paragraph();
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin: 0;
+      }
     }
     &__image {
+      margin: 2rem 0;
       position: relative;
-      width: 300px;
-      height: 300px;
       flex: 1;
+      max-width: 783px;
+      max-height: 530px;
+
+      img {
+        object-fit: cover;
+      }
     }
   }
+}
+.active {
+  background-color: #000;
+  color: white;
 }
