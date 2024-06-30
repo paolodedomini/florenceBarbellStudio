@@ -6,7 +6,7 @@ import { useState } from "react";
 import LoaderSite from "@/components/loaders/loader";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
-
+import ImagePreload from "../loaders/imagePreLoad";
 /**
  * HERO VIDEO
  * Componente per la gestione del video in homepage con testo
@@ -113,12 +113,7 @@ function HeroVideo({
           </>
         )}
         {typeOfData === "image" && (
-          <Image
-            className={style.hero__mainImage}
-            src={URL}
-            alt="heroImage"
-            layout="fill"
-          />
+          <ImagePreload src={URL} alt="heroImage" full={true} />
         )}
       </div>
 
