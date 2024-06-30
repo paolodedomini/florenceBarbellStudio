@@ -68,7 +68,7 @@ function SliderName({
 function Slider({ data }: { data: Tdata[] }) {
   SwiperCore.use([Autoplay]);
 
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<any | undefined>(undefined);
   const [isChangeSlider, setIsChangeSlider] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -79,10 +79,6 @@ function Slider({ data }: { data: Tdata[] }) {
   return (
     <>
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}

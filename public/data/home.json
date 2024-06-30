@@ -21,7 +21,31 @@
                 "link": "contatti.html"
             }
         ],
-        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi."
+        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi.",
+        "list": [
+            {
+                "titolo": "3 power anal Rack"
+            },
+            {
+                "titolo": "5 Penis enlargement station"
+            },
+            {
+                "titolo": "CONCEPT 2 machines of death"
+            },
+            {
+                "titolo": "panche d’ogni misura"
+            },
+            {
+                "titolo": "pesi che manco la madonna"
+            }
+        ],
+        "carousel": [
+            "/image/NICCO-STUDIO_-2.jpg",
+            "/image/NICCO-STUDIO_-3.jpg",
+            "/image/NICCO-STUDIO_-4.jpg",
+            "/image/NICCO-STUDIO_-2.jpg",
+            "/image/NICCO-STUDIO_-3.jpg"
+        ]
     },
     "en": {
         "titolo": "web site",
@@ -45,6 +69,30 @@
                 "link": "contatti.html"
             }
         ],
-        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi."
+        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi.",
+        "list": [
+            {
+                "titolo": "3 power anal Rack"
+            },
+            {
+                "titolo": "5 Penis enlargement station"
+            },
+            {
+                "titolo": "CONCEPT 2 machines of death"
+            },
+            {
+                "titolo": "panche d’ogni misura"
+            },
+            {
+                "titolo": "pesi che manco la madonna"
+            }
+        ],
+        "carousel": [
+            "/image/NICCO-STUDIO_-2.jpg",
+            "/image/NICCO-STUDIO_-3.jpg",
+            "/image/NICCO-STUDIO_-4.jpg",
+            "/image/NICCO-STUDIO_-2.jpg",
+            "/image/NICCO-STUDIO_-3.jpg"
+        ]
     }
 }

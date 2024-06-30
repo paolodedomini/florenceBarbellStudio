@@ -25,7 +25,7 @@ function SingleStaff({ data }: { data: Tdata }) {
           <Image src={data.image} alt={data.nome} layout="fill" />
         </div>
         <div className={style.staff__nome}>
-          {data.nome + data.cognome}
+          {data.nome + " " + data.cognome}
           <span>{data.ruolo}</span>
         </div>
       </li>

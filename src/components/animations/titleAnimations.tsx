@@ -32,7 +32,7 @@ function TitleAnimations({
   };
 
   const letter = {
-    hidden: { opacity: 1, y: 200 },
+    hidden: { opacity: 1, y: 250 },
     show: {
       opacity: 1,
 
@@ -64,7 +64,14 @@ function TitleAnimations({
           </motion.span>
         );
       })}
-      <div className={style.sub}>{subtesto}</div>
+      <motion.div
+        className={style.sub}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1 }}
+      >
+        {subtesto}
+      </motion.div>
     </motion.div>
   );
 }

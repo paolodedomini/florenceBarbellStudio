@@ -68,7 +68,22 @@ function FixedModal({
               layout={"fill"}
             />
           </motion.div>
-          <div className={style.fixedModal__content}>
+          <motion.div
+            className={style.fixedModal__content}
+            initial={{
+              opacity: 0,
+              x: "10vw",
+            }}
+            animate={{
+              opacity: 1,
+              x: "0vw",
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+              delay: 1.5,
+            }}
+          >
             <div
               className={style.fixedModal__content__close}
               onClick={() => closeModal(false)}
@@ -76,22 +91,23 @@ function FixedModal({
               close
             </div>
             <div className={style.fixedModal__content__title}>
-              <h3>{dataScheda.nome + " " + dataScheda.cognome}</h3>
+              <h2>{dataScheda.nome + " " + dataScheda.cognome}</h2>
             </div>
             <p dangerouslySetInnerHTML={{ __html: dataScheda.descrizione }} />
+
+            <h2>SKILLS</h2>
+            <ul>
+              {dataScheda.skills.map((item, index) => {
+                return <li key={index}>{item}</li>;
+              })}
+            </ul>
+            <h2>DOCS</h2>
             <p>
-              <span>SKILLS</span>
-              <ul>
-                {dataScheda.skills.map((item, index) => {
-                  return <li key={index}>{item}</li>;
-                })}
-              </ul>
+              <a href="/doc/Gradi_Niccolo_Curriculum.pdf" target="_blank">
+                Curriculum Vitae
+              </a>
             </p>
-            <p>
-              <span>Tecnologie</span>
-              {dataScheda.cv}
-            </p>
-          </div>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

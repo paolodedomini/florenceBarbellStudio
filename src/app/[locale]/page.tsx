@@ -13,6 +13,10 @@ import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Image from "next/image";
+import BigList from "@/components/list/bigList";
+import CarouselImage from "@/components/carousel/carouselImage";
+import FormSection from "@/components/form/formSection";
+
 /**
  * PAGINA
  * Utilizzare le pagine per fetchare i dati e passarli ai componenti
@@ -50,10 +54,10 @@ export default async function Home({
         />
       </div>
 
-      <AnimatedSection>
+      <AnimatedSection overflowHidden={true}>
         <Tabs data={homeData[locale as keyof typeof homeData].tabs} />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection overflowHidden={false}>
         <Parallax
           testo={homeData[locale as keyof typeof homeData].parallax}
           imageURL="/image/parallaxhome.jpg"
@@ -75,10 +79,33 @@ export default async function Home({
           height="111"
         />
       </div>
-      <AnimatedSection>
+
+      <AnimatedSection overflowHidden={false}>
+        <BigList data={homeData[locale as keyof typeof homeData].list} />
+        <CarouselImage
+          data={homeData[locale as keyof typeof homeData].carousel}
+        />
+      </AnimatedSection>
+      <div className={"wrapperFlex"}>
+        <TitleAnimations
+          testo="Florence Barbell STAFF"
+          subtesto="Ti faremo vomitare sangue dal culo"
+          animation="word"
+        />
+        <Image
+          src="/image/frecciatitoli.svg"
+          alt="test"
+          width="16"
+          height="111"
+        />
+      </div>
+      <AnimatedSection overflowHidden={false}>
         <Staff data={staffData[locale as keyof typeof homeData]} />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection overflowHidden={false}>
+        <FormSection />
+      </AnimatedSection>
+      <AnimatedSection overflowHidden={false}>
         <LeafletMain address={address} />
       </AnimatedSection>
     </main>

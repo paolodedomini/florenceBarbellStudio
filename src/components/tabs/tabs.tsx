@@ -1,8 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import style from "./tabs.module.scss";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+
 type Tdata = {
   titolo: string;
   testo: string;
@@ -96,15 +102,39 @@ function Tabs({ data }: { data: Tdata[] | undefined }) {
   const [tabData, setTabData] = useState<Tdata | undefined>(
     data && data[activeTab]
   );
+  const wrapper = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: wrapper,
+    offset: ["start end", "start start"],
+  });
+
+  const scrollingImmagine = useTransform(scrollYProgress, [0, 1], [0, 100]);
+
   useEffect(() => {
     setTabData(data && data[activeTab]);
   }, [activeTab]);
 
   if (!data) return null;
   return (
-    <div className={style.tabs}>
+    <div className={style.tabs} ref={wrapper}>
       <TabNav data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
       <TabBody tabData={tabData} />
+      <motion.div
+        style={{
+          position: "absolute",
+          y: scrollingImmagine,
+          top: "0",
+          left: "-36px",
+          zIndex: -1,
+        }}
+      >
+        <Image
+          src={"/image/macchia1.jpg"}
+          alt="macchia"
+          width={260}
+          height={680}
+        />
+      </motion.div>
     </div>
   );
 }
