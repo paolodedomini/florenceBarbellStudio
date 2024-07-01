@@ -119,6 +119,7 @@ function HeroVideo({
             full={false}
             width={1920}
             height={1080}
+            lazy={false}
           />
         )}
       </div>

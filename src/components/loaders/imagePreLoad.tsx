@@ -10,12 +10,14 @@ export const ImagePreload = ({
   width,
   height,
   full,
+  lazy,
 }: {
   src: string;
   alt: string;
   width?: number;
   height?: number;
   full?: boolean;
+  lazy?: boolean;
 }) => {
   const [reveal, setReveal] = useState(false);
   const visibility = reveal ? "visible" : "hidden";
@@ -38,6 +40,7 @@ export const ImagePreload = ({
           style={{ visibility, objectFit: "cover", width: "100%" }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
+          priority={lazy}
         />
       ) : (
         <Image
@@ -48,6 +51,7 @@ export const ImagePreload = ({
           style={{ visibility }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
+          priority={lazy}
         />
       )}
       <AnimatePresence>
