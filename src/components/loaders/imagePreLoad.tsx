@@ -41,6 +41,7 @@ export const ImagePreload = ({
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
           priority={lazy}
+          sizes="(max-width: 768px) 30vw, (max-width: 1200px) 100vw, 100vw"
         />
       ) : (
         <Image

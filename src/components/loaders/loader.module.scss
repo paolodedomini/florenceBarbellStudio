@@ -13,6 +13,9 @@
 .imagePreloadWrapper {
   &.full {
     height: 100vh;
+    @media #{$landscape} {
+      height: 40vh;
+    }
   }
   img {
     width: 100%;
