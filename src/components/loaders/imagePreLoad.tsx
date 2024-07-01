@@ -23,18 +23,19 @@ export const ImagePreload = ({
 
   return (
     <div
+      className={`${style.imagePreloadWrapper} ${full ? style.full : ""}`}
       style={{
         width: "100%",
         position: "relative",
-        height: full ? "100%" : "auto",
       }}
     >
       {full ? (
         <Image
+          className={style.imagePreload}
           src={src}
           alt={alt}
           layout="fill"
-          style={{ visibility }}
+          style={{ visibility, objectFit: "cover", width: "100%" }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
         />

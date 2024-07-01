@@ -113,7 +113,13 @@ function HeroVideo({
           </>
         )}
         {typeOfData === "image" && (
-          <ImagePreload src={URL} alt="heroImage" full={true} />
+          <ImagePreload
+            src={URL}
+            alt="heroImage"
+            full={false}
+            width={1920}
+            height={1080}
+          />
         )}
       </div>
 

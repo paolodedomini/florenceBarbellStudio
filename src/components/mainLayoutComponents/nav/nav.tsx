@@ -122,9 +122,9 @@ function NavBar() {
               </div>
               <a href="/">
                 <Image
-                  src="/image/logo-white.svg"
-                  width={121}
-                  height={94}
+                  src="/image/florencebarbellstudiologo.png"
+                  width={220}
+                  height={40}
                   alt="logo"
                 />
               </a>

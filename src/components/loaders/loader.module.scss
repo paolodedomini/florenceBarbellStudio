@@ -10,3 +10,15 @@
   align-items: center;
   z-index: 100;
 }
+.imagePreloadWrapper {
+  &.full {
+    height: 100vh;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    @media #{$landscape} {
+      height: 50vh;
+    }
+  }
+}

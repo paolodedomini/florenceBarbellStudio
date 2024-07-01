@@ -41,4 +41,23 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  @media #{$tablet} {
+    flex-direction: column;
+  }
+  img {
+    @media #{$tablet} {
+      width: 6%;
+      padding-right: 10px;
+    }
+  }
+}
+.macchia {
+  @media #{$tablet} {
+    opacity: 0.5;
+  }
+}
+section {
+  @media #{$tablet} {
+    padding: 0 1rem;
+  }
 }

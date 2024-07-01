@@ -120,6 +120,7 @@ function Tabs({ data }: { data: Tdata[] | undefined }) {
       <TabNav data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
       <TabBody tabData={tabData} />
       <motion.div
+        className={"macchia"}
         style={{
           position: "absolute",
           y: scrollingImmagine,

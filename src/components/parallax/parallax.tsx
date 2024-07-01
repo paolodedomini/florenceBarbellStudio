@@ -55,6 +55,7 @@ function Parallax({
         </motion.div>
       </motion.div>
       <motion.div
+        className="macchia"
         style={{
           position: "absolute",
           y: scrollingImmagine,

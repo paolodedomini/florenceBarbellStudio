@@ -7,6 +7,15 @@
   text-transform: uppercase;
   letter-spacing: -5px;
   overflow: hidden;
+  @media #{$large} {
+    font-size: 6rem;
+  }
+  @media #{$landscape} {
+    font-size: 4rem;
+    letter-spacing: -1px;
+    line-height: 1;
+    padding: 1rem;
+  }
   span {
     display: inline-block;
     transform-origin: left;
@@ -21,5 +30,11 @@
     position: relative;
     letter-spacing: -1px;
     right: 18px;
+    @media #{$landscape} {
+      font-size: 1.5rem;
+      top: 0px;
+      right: 10px;
+      text-align: center;
+    }
   }
 }
