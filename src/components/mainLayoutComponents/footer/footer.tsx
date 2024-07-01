@@ -1,79 +1,85 @@
 "use client";
 import Image from "next/image";
 import style from "./footer.module.scss";
-import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
-
-function Footer() {
-  const pathN = usePathname();
-  const locale = useLocale();
-  const t = useTranslations("Footer");
-  const tnav = useTranslations("Navigation");
-  const navigation = {
-    nav: [
-      {
-        title: tnav("azienda.titolo"),
-        url: "/" + locale + tnav("azienda.url"),
-      },
-      {
-        title: tnav("contatti.titolo"),
-        url: tnav("azienda.url"),
-      },
-      {
-        title: tnav("lavora_con_noi.titolo"),
-        url: "/" + locale + tnav("lavora_con_noi.url"),
-      },
-    ],
+import { useLocale } from "next-intl";
+type Tdata = {
+  it: {
+    piva: string;
+    pivaNumber: string;
+    address: string;
+    addressValue: string;
+    email: string;
+    emailValue: string;
+    seguici: string;
+    phone: string;
+    phoneValue: string;
   };
+  en: {
+    piva: string;
+    pivaNumber: string;
+    address: string;
+    addressValue: string;
+    email: string;
+    emailValue: string;
+    seguici: string;
+    phone: string;
+    phoneValue: string;
+  };
+};
+
+function Footer({ data }: { data: Tdata }) {
+  const locale = useLocale();
+
+  const footerData = data[locale as keyof typeof data];
 
   return (
     <footer className={style.footer}>
       <div className={style.footer__first}>
-        <Image src="/image/vtslogo.jpg" width={180} height={96} alt="logo" />
+        <Image
+          src="/image/florencebarbellstudiologo.png"
+          width={180}
+          height={40}
+          alt="logo"
+        />
         <ul>
-          <li>{t("col1.piva")}</li>
-          <li>{t("col1.rea")}</li>
           <li>
-            {t("col1.pec")}{" "}
-            <a href={"mailto:" + t("col1.pecURL")}>{t("col1.pecURL")}</a>
+            {footerData.piva}: {footerData.pivaNumber}
+          </li>
+          <li>
+            {footerData.address}:{footerData.addressValue}
+          </li>
+          <li>
+            {footerData.phone}:{footerData.phoneValue}
+          </li>
+          <li>
+            {footerData.email}:{" "}
+            <a href={"mailto:" + footerData.emailValue}>
+              {footerData.emailValue}
+            </a>
           </li>
         </ul>
       </div>
-      <ul className={style.footer__second}>
-        <li>VTS</li>
-        <li> {t("col2.indirizzo")} </li>
-        <li>
-          <a href={"tel:" + t("col2.tel")}>tel:{t("col2.tel")}</a>
-        </li>
-        <li>
-          <a href={"mailto:" + t("col2.email")}>{t("col2.email")}</a>
-        </li>
-        <li>{t("col2.subsidiary")}</li>
-        <li>{t("col2.subsidiary_indirizzo")}</li>
-      </ul>
-      <ul className={style.footer__third}>
-        {navigation.nav.map((item, index) => (
-          <li
-            className={`${pathN.includes(item.url) && style.activeLink}`}
-            key={index}
-          >
-            {item.title === "contatti" ? (
-              <a href={item.url}>{item.title}</a>
-            ) : (
-              <Link href={item.url}>{item.title}</Link>
-            )}
-          </li>
-        ))}
-        <li>Privacy Policy</li>
-        <li>Cookie Policy</li>
-      </ul>
+
       <div className={style.footer__fourth}>
-        <h3>{t("col4.seguici")}</h3>
         <div className={style.socialIcons}>
-          <Image src="/image/what.svg" width={50} height={50} alt="logo" />
-          <Image src="/image/link.svg" width={50} height={50} alt="logo" />
-          <Image src="/image/instagram.svg" width={50} height={50} alt="logo" />
+          <Image
+            src="/image/logofipe-bianco-300x125-1.png"
+            width={300}
+            height={125}
+            alt="logo"
+          />
+          <Image
+            src="/image/CONI-150x150.png"
+            width={150}
+            height={150}
+            alt="logo"
+          />
+          <Image
+            src="/image/UNC-150x150.png"
+            width={150}
+            height={150}
+            alt="logo"
+          />
         </div>
       </div>
     </footer>

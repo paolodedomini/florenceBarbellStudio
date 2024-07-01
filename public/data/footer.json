@@ -1,0 +1,28 @@
+{
+    "it": {
+        "piva": "P.IVA",
+        "pivaNumber": "07148290484",
+        "address": "Indirizzo",
+        "addressValue": "Via Gugliemo Pepe 47",
+        "city": "Città",
+        "cityValue": "Firenze",
+        "phone": "Telefono",
+        "phoneValue": "+39 3386988655",
+        "email": "Email",
+        "emailValue": "florencebarbellstudio@gmail.com",
+        "seguici": "Seguici su"
+    },
+    "en": {
+        "piva": "P.IVA",
+        "pivaNumber": "07148290484",
+        "address": "Indirizzo",
+        "addressValue": "Via Gugliemo Pepe 47",
+        "city": "Città",
+        "cityValue": "Firenze",
+        "phone": "Telefono",
+        "phoneValue": "+39 3386988655",
+        "email": "Email",
+        "emailValue": "florencebarbellstudio@gmail.com",
+        "seguici": "Follow us on"
+    }
+}

@@ -1,13 +1,13 @@
 .footer {
   position: relative;
   width: 100%;
-  background-color: $blue;
+  background-color: $darkblue;
   color: white;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   padding: 4rem 2rem;
   justify-items: center;
-  align-items: end;
+  align-items: flex-start;
   font-size: 19px;
   gap: 2rem;
   font-weight: 200;
@@ -34,6 +34,7 @@
   }
   &__fourth {
     justify-self: center;
+    grid-column: 4/5;
     h3 {
       margin-bottom: 0.5rem;
     }

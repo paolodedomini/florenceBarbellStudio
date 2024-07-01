@@ -2,13 +2,9 @@ import HeroVideo from "@/components/heros/Hero";
 import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
-import heroData from "../../../public/data/hero.json";
-import homeData from "../../../public/data/home.json";
-import staffData from "../../../public/data/staff.json";
 import Parallax from "@/components/parallax/parallax";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
 import LeafletMain from "@/components/map/Leaflet";
-
 import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
 import TitleAnimations from "@/components/animations/titleAnimations";
@@ -16,6 +12,10 @@ import Image from "next/image";
 import BigList from "@/components/list/bigList";
 import CarouselImage from "@/components/carousel/carouselImage";
 import FormSection from "@/components/form/formSection";
+/* DATA */
+import heroData from "../../../public/data/hero.json";
+import homeData from "../../../public/data/home.json";
+import staffData from "../../../public/data/staff.json";
 
 /**
  * PAGINA
@@ -104,9 +104,6 @@ export default async function Home({
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />
-      </AnimatedSection>
-      <AnimatedSection overflowHidden={false}>
-        <LeafletMain address={address} />
       </AnimatedSection>
     </main>
   );

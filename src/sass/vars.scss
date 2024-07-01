@@ -11,10 +11,12 @@ $black: #121212;
 $darkGrey: #3b3b3b;
 $grey: #c8c8c8;
 
-/*FONTS*/
+/*FONTS size*/
 $size-navbar: 14px;
 $size-p: 22px;
 $pageSubtitle: 32px;
+
+/*FONTS*/
 @mixin title() {
   font-family: var(--font-oswald);
 }

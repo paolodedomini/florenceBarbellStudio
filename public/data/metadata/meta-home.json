@@ -1,0 +1,106 @@
+{
+    "it": {
+        "metaHtml": {
+            "title": "Florence Barbell Studio",
+            "description": "Esperti in Personal training, riatletizzazione e Small Group Training.",
+            "openGraph": {
+                "title": "Florence Barbell Studio",
+                "description": "Esperti in Personal training, riatletizzazione e Small Group Training.",
+                "type": "website",
+                "locale": "it_IT",
+                "url": "https://www.florencebarbellstudio.it/",
+                "siteName": "Florence Barbell Studio",
+                "images": [
+                    {
+                        "url": "/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "Florence Barbell Studio"
+                    }
+                ]
+            }
+        },
+        "jsonld": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "image": [
+                "https://test.it//image/4_3graph.jpg",
+                "https://test.it//image/mainimage.jpg"
+            ],
+            "name": "Florence Barbell Studio",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": " via della stranezza 27 Mologno Barga",
+                    "addressLocality": "Lucca",
+                    "addressRegion": "Toscana",
+                    "postalCode": "55051",
+                    "addressCountry": "IT"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "via della figata totale 27 Mologno Barga",
+                    "addressLocality": "liguria",
+                    "addressRegion": "Genova",
+                    "postalCode": "123213",
+                    "addressCountry": "GE"
+                }
+            ],
+            "url": "https://test.it/",
+            "telephone": "+320583711372",
+            "email": "info@test.it"
+        }
+    },
+    "en": {
+        "metaHtml": {
+            "title": "Florence Barbell Studio",
+            "description": "Esperti in Personal training, riatletizzazione e Small Group Training.",
+            "openGraph": {
+                "title": "Florence Barbell Studio",
+                "description": "Esperti in Personal training, riatletizzazione e Small Group Training.",
+                "type": "website",
+                "locale": "it_IT",
+                "url": "https://www.florencebarbellstudio.it/",
+                "siteName": "Florence Barbell Studio",
+                "images": [
+                    {
+                        "url": "/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "Florence Barbell Studio"
+                    }
+                ]
+            }
+        },
+        "jsonld": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "image": [
+                "https://test.it//image/4_3graph.jpg",
+                "https://test.it//image/mainimage.jpg"
+            ],
+            "name": "Florence Barbell Studio",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": " via della stranezza 27 Mologno Barga",
+                    "addressLocality": "Lucca",
+                    "addressRegion": "Toscana",
+                    "postalCode": "55051",
+                    "addressCountry": "IT"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "via della figata totale 27 Mologno Barga",
+                    "addressLocality": "liguria",
+                    "addressRegion": "Genova",
+                    "postalCode": "123213",
+                    "addressCountry": "GE"
+                }
+            ],
+            "url": "https://test.it/",
+            "telephone": "+320583711372",
+            "email": "info@test.it"
+        }
+    }
+}

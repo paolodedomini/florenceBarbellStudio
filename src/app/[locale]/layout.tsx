@@ -8,6 +8,8 @@ import Nav from "@/components/mainLayoutComponents/nav/nav";
 import { locales } from "../../configTranslations";
 import { unstable_setRequestLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import Footer from "@/components/mainLayoutComponents/footer/footer";
+import footerData from "../../../public/data/footer.json";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -54,6 +56,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Nav />
           <SmoothScrolling>{children}</SmoothScrolling>
+          <Footer data={footerData} />
         </NextIntlClientProvider>
       </body>
     </html>
