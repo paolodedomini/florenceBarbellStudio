@@ -20,6 +20,7 @@ import Splash from "@/components/splash/splash";
 import HeroImage from "../../../public/image/hero.jpg";
 
 import dynamic from "next/dynamic";
+import InstagramPost from "@/components/instagram/instagram";
 
 const CarouselImage = dynamic(
   () => import("@/components/carousel/carouselImage")
@@ -103,6 +104,9 @@ export default async function Home({
       </div>
       <AnimatedSection overflowHidden={false}>
         <Staff data={staffData[locale as keyof typeof homeData]} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <InstagramPost />
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />
