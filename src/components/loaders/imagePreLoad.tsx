@@ -13,6 +13,7 @@ export const ImagePreload = ({
   isLazy,
   type,
 }: {
+  loaderImg?: (src: string) => string;
   src: StaticImageData | string;
   alt: string;
   width?: number;
@@ -57,13 +58,14 @@ export const ImagePreload = ({
           alt={alt}
           width={width}
           height={height}
-          style={{ visibility, width: "100%" }}
+          style={{ visibility }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
           priority={isLazy}
           sizes="(max-width: 480px) 40vw,"
         />
       )}
+
       {type === "fill" && (
         <Image
           className={style.imagePreload}
@@ -98,7 +100,7 @@ export const ImagePreload = ({
               }}
             >
               <Image
-                src="/image/florencebarbellstudiologo.png"
+                src="/image/loader.svg"
                 width={300}
                 height={58}
                 alt="logo"

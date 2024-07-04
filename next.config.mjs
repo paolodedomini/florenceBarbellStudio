@@ -12,6 +12,7 @@ const nextConfig = {
   images: {
     deviceSizes: [350, 440, 750, 828, 1080, 1200, 1920, 2048],
     formats: ["image/avif", "image/webp"],
+    domains: ["scontent.cdninstagram.com"],
   },
   webpack: (config, options) => {
     /**
