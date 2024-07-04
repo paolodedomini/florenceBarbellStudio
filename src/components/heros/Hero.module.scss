@@ -64,6 +64,9 @@
     @media #{$landscape} {
       transform: translate(-50%, -50%);
     }
+    @media #{$phone} {
+      top: 50%;
+    }
     &__quoteBy {
       font-size: 1.5rem;
       font-weight: 200;

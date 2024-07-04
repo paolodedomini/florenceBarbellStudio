@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Oswald, Outfit } from "next/font/google";
 import "@/sass/all.scss";
 import SmoothScrolling from "@/components/scroll/smoothScrolling";
@@ -10,16 +9,19 @@ import { unstable_setRequestLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import Footer from "@/components/mainLayoutComponents/footer/footer";
 import footerData from "../../../public/data/footer.json";
-
+import CookieConsentBanner from "@/components/cookieConsent/cookieConsent";
+import ScrollTop from "@/components/scroll/scrollToTop";
 const oswald = Oswald({
   subsets: ["latin"],
   weight: ["200", "400", "700"],
   variable: "--font-oswald",
+  display: "swap",
 });
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["200", "400", "700"],
   variable: "--font-outfit",
+  display: "swap",
 });
 
 /** FUNZIONE NEXT PER STATICIZZARE LE PAGINE CON NEXT-INTL */
@@ -53,10 +55,12 @@ export default async function RootLayout({
         <JsonldMetaData metadata={meta} />
       </head>
       <body className={`${oswald.variable} ${outfit.variable}`}>
+        <CookieConsentBanner />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Nav />
           <SmoothScrolling>{children}</SmoothScrolling>
           <Footer data={footerData} />
+          <ScrollTop />
         </NextIntlClientProvider>
       </body>
     </html>

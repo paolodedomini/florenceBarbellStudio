@@ -1,9 +1,9 @@
 "use client";
 import style from "./staff.module.scss";
-import Image from "next/image";
-import { createPortal } from "react-dom";
+
 import FixedModal from "../modals/fixedModal";
 import { useState } from "react";
+import ImagePreload from "../loaders/imagePreLoad";
 
 type Tdata = {
   image: string;
@@ -22,7 +22,7 @@ function SingleStaff({ data }: { data: Tdata }) {
     <>
       <li onClick={() => setModal(true)}>
         <div className={style.staff__image}>
-          <Image src={data.image} alt={data.nome} layout="fill" />
+          <ImagePreload src={data.image} alt={data.nome} type={"fill"} />
         </div>
         <div className={style.staff__nome}>
           {data.nome + " " + data.cognome}

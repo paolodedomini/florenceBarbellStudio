@@ -6,6 +6,9 @@
   &__wrapperSlide {
     position: relative;
     height: 300px;
+    img {
+      height: auto;
+    }
     @media #{$phone} {
       height: 100px;
     }

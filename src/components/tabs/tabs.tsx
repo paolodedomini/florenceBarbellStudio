@@ -8,6 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import ImagePreload from "../loaders/imagePreLoad";
 
 type Tdata = {
   titolo: string;
@@ -71,6 +72,11 @@ function TabBody({ tabData }: { tabData: Tdata | undefined }) {
                 alt={tabData?.titolo}
                 layout="fill"
                 quality={100}
+              />
+              <ImagePreload
+                src={tabData.image}
+                alt={tabData?.titolo}
+                type="fill"
               />
             </motion.div>
           ) : (

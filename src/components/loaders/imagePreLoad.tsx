@@ -1,23 +1,24 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import style from "./loader.module.scss";
+
 export const ImagePreload = ({
   src,
   alt,
   width,
   height,
-  full,
-  lazy,
+  isLazy,
+  type,
 }: {
-  src: string;
+  src: StaticImageData | string;
   alt: string;
   width?: number;
   height?: number;
-  full?: boolean;
-  lazy?: boolean;
+  isLazy?: boolean;
+  type: "fill" | "hero" | "fixed";
 }) => {
   const [reveal, setReveal] = useState(false);
   const visibility = reveal ? "visible" : "hidden";
@@ -25,34 +26,54 @@ export const ImagePreload = ({
 
   return (
     <div
-      className={`${style.imagePreloadWrapper} ${full ? style.full : ""}`}
+      className={`${style.imagePreloadWrapper} ${
+        type === "hero"
+          ? style.hero
+          : type === "fill"
+          ? style.fill
+          : style.fixed
+      }`}
       style={{
         width: "100%",
         position: "relative",
       }}
     >
-      {full ? (
+      {type === "hero" && (
         <Image
           className={style.imagePreload}
-          src={src}
+          src={src || ""}
           alt={alt}
           layout="fill"
           style={{ visibility, objectFit: "cover", width: "100%" }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
-          priority={lazy}
-          sizes="(max-width: 768px) 30vw, (max-width: 1200px) 100vw, 100vw"
+          priority={true}
+          sizes="(max-width: 440px) 30vw,(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
         />
-      ) : (
+      )}
+      {type === "fixed" && (
         <Image
-          src={src}
+          src={src || ""}
           alt={alt}
           width={width}
           height={height}
-          style={{ visibility }}
+          style={{ visibility, width: "100%" }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
-          priority={lazy}
+          priority={isLazy}
+          sizes="(max-width: 480px) 40vw,"
+        />
+      )}
+      {type === "fill" && (
+        <Image
+          className={style.imagePreload}
+          src={src || ""}
+          alt={alt}
+          layout="fill"
+          onError={() => setReveal(true)}
+          onLoadingComplete={() => setReveal(true)}
+          priority={isLazy}
+          sizes="(max-width: 480px) 50vw, (max-width: 1200px) 100vw, 100vw"
         />
       )}
       <AnimatePresence>

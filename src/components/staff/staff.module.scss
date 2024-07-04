@@ -5,7 +5,9 @@
   max-width: 960px;
   margin: 4rem auto;
   gap: 2rem;
-
+  @media #{$tablet} {
+    justify-content: center;
+  }
   > li {
     position: relative;
     cursor: pointer;

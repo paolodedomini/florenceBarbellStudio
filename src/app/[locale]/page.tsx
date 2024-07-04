@@ -1,21 +1,29 @@
 import HeroVideo from "@/components/heros/Hero";
 import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
+
 import Parallax from "@/components/parallax/parallax";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
-import LeafletMain from "@/components/map/Leaflet";
 import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Image from "next/image";
 import BigList from "@/components/list/bigList";
-import CarouselImage from "@/components/carousel/carouselImage";
+
 import FormSection from "@/components/form/formSection";
 /* DATA */
 import heroData from "../../../public/data/hero.json";
 import homeData from "../../../public/data/home.json";
 import staffData from "../../../public/data/staff.json";
+import Splash from "@/components/splash/splash";
+/*IMAGES*/
+import HeroImage from "../../../public/image/hero.jpg";
+
+import dynamic from "next/dynamic";
+
+const CarouselImage = dynamic(
+  () => import("@/components/carousel/carouselImage")
+);
 
 /**
  * PAGINA
@@ -30,20 +38,13 @@ export default async function Home({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const t = await getTranslations("generics");
+
   const HeroDataLang = heroData[locale as keyof typeof heroData];
-  const address = {
-    city: t("cittaName"),
-    street: t("indirizzoName"),
-    number: t("numeroCivicoName"),
-  };
+
   return (
     <main className={styles.main}>
-      <HeroVideo
-        typeOfData="image"
-        URL={"/image/hero.jpg"}
-        data={HeroDataLang}
-      />
+      <Splash />
+      <HeroVideo typeOfData="image" IMGURL={HeroImage} data={HeroDataLang} />
       <div className={"wrapperFlex"}>
         <TitleAnimations testo="Florence Barbell Studio is" animation="word" />
         <Image
@@ -82,6 +83,7 @@ export default async function Home({
 
       <AnimatedSection overflowHidden={false}>
         <BigList data={homeData[locale as keyof typeof homeData].list} />
+
         <CarouselImage
           data={homeData[locale as keyof typeof homeData].carousel}
         />

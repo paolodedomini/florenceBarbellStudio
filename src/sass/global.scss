@@ -55,9 +55,24 @@ ul {
   @media #{$tablet} {
     opacity: 0.5;
   }
+  @media #{$phone} {
+    display: none;
+  }
 }
 section {
   @media #{$tablet} {
     padding: 0 1rem;
+  }
+}
+button {
+  border-radius: 0;
+  border: none;
+  padding: 1rem 2rem;
+  margin-right: 0;
+  margin-left: auto;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 }

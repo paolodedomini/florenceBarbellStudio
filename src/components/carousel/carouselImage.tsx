@@ -8,9 +8,9 @@ import "./carousel.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 /* import SwiperCore from "swiper";
 import { Autoplay } from "swiper/modules"; */
-import { FreeMode, Navigation, Thumbs, EffectFade } from "swiper/modules";
-import Image from "next/image";
+import { FreeMode } from "swiper/modules";
 import style from "./carousel.module.scss";
+import ImagePreload from "../loaders/imagePreLoad";
 
 function CarouselImage({ data }: { data: string[] }) {
   return (
@@ -31,11 +31,11 @@ function CarouselImage({ data }: { data: string[] }) {
               <SwiperSlide key={index}>
                 {item && (
                   <div className={style.carouselImage__wrapperSlide}>
-                    <Image
+                    <ImagePreload
                       src={item}
                       alt={"immagine palestra"}
-                      layout="fill"
-                      objectFit="cover"
+                      isLazy={true}
+                      type={"fill"}
                     />
                   </div>
                 )}
