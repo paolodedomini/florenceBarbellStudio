@@ -20,11 +20,12 @@ import Splash from "@/components/splash/splash";
 import HeroImage from "../../../public/image/hero.jpg";
 
 import dynamic from "next/dynamic";
-import InstagramPost from "@/components/instagram/instagram";
+import { Suspense } from "react";
 
 const CarouselImage = dynamic(
   () => import("@/components/carousel/carouselImage")
 );
+const InstagramPost = dynamic(() => import("@/components/instagram/instagram"));
 
 /**
  * PAGINA
@@ -82,13 +83,13 @@ export default async function Home({
         />
       </div>
 
-      <AnimatedSection overflowHidden={false}>
+      {/*      <AnimatedSection overflowHidden={false}>
         <BigList data={homeData[locale as keyof typeof homeData].list} />
 
         <CarouselImage
           data={homeData[locale as keyof typeof homeData].carousel}
         />
-      </AnimatedSection>
+      </AnimatedSection> */}
       <div className={"wrapperFlex"}>
         <TitleAnimations
           testo="Florence Barbell STAFF"
