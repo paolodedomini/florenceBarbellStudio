@@ -1,6 +1,5 @@
 "use client";
 import styles from "./instagram.module.scss";
-
 import { useState, useEffect } from "react";
 import ImagePreload from "../loaders/imagePreLoad";
 import TitleAnimations from "../animations/titleAnimations";
@@ -15,7 +14,8 @@ type Tdata = {
   }[];
 };
 
-export default function InstagramPost() {
+export default function InstagramPost({ token }: { token: any }) {
+  console.log(token, "token");
   const [data, setData] = useState<Tdata | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

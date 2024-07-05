@@ -20,7 +20,7 @@ import Splash from "@/components/splash/splash";
 import HeroImage from "../../../public/image/hero.jpg";
 
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import InstagramWrapperToken from "@/components/instagram/instagramWrapper";
 
 const CarouselImage = dynamic(
   () => import("@/components/carousel/carouselImage")
@@ -83,13 +83,13 @@ export default async function Home({
         />
       </div>
 
-      {/*      <AnimatedSection overflowHidden={false}>
+      <AnimatedSection overflowHidden={false}>
         <BigList data={homeData[locale as keyof typeof homeData].list} />
 
         <CarouselImage
           data={homeData[locale as keyof typeof homeData].carousel}
         />
-      </AnimatedSection> */}
+      </AnimatedSection>
       <div className={"wrapperFlex"}>
         <TitleAnimations
           testo="Florence Barbell STAFF"
@@ -107,7 +107,9 @@ export default async function Home({
         <Staff data={staffData[locale as keyof typeof homeData]} />
       </AnimatedSection>
       <AnimatedSection>
-        <InstagramPost />
+        {/*         <InstagramWrapperToken
+          renderItem={(token: string) => <InstagramPost token={token} />}
+        /> */}
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />
