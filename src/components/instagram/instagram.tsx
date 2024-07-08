@@ -33,7 +33,7 @@ export default async function InstagramPost({
       <TitleAnimations testo="BarbellGram" animation="letter" />
       <ul className={styles.wrapperInstagram__list}>
         {dataRes &&
-          dataRes.data.map(
+          dataRes.data?.map(
             (post: {
               id: string;
               media_url: string;
