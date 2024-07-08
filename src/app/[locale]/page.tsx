@@ -20,7 +20,6 @@ import Splash from "@/components/splash/splash";
 import HeroImage from "../../../public/image/hero.jpg";
 
 import dynamic from "next/dynamic";
-import InstagramWrapperToken from "@/components/instagram/instagramWrapper";
 
 const CarouselImage = dynamic(
   () => import("@/components/carousel/carouselImage")
@@ -107,9 +106,12 @@ export default async function Home({
         <Staff data={staffData[locale as keyof typeof homeData]} />
       </AnimatedSection>
       <AnimatedSection>
-        {/*         <InstagramWrapperToken
-          renderItem={(token: string) => <InstagramPost token={token} />}
-        /> */}
+        <InstagramPost
+          token={
+            "IGQWROUU9MaW9PU1ZA2UVlVN3dTTGJ6cXpFckJtWGNNT2FlUGtubHhBQUZAZAT0Q4MS1JaFFqOGRDLUtuOEZAwOTBjaEhJbDJYeWVWa1luN3c0UlRMTjU5WjJfVlZA4eFZA0VlNCZA3ZAFckJvbU96SDRsenk3SDBZAUHRGbnMZD"
+          }
+          client={"aa5c815437121a7a8f6c2db93d8195f4"}
+        />
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />

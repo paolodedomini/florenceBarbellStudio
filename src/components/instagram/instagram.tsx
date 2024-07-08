@@ -1,6 +1,4 @@
-"use client";
 import styles from "./instagram.module.scss";
-import { useState, useEffect } from "react";
 import ImagePreload from "../loaders/imagePreLoad";
 import TitleAnimations from "../animations/titleAnimations";
 
@@ -14,28 +12,28 @@ type Tdata = {
   }[];
 };
 
-export default function InstagramPost({ token }: { token: any }) {
-  console.log(token, "token");
-  const [data, setData] = useState<Tdata | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    fetch(
-      `https://graph.instagram.com/v20.0/me/media?fields=id,media_url,permalink,media_type,thumbnail_url&limit=10&access_token=IGQWRNWDEyQkNEWmZAqdjdYM2ZAPVTdMYUlDOU9Mejl4V0xIN1c1cDV1SGc1MDFQZAnpqSVRQbGkzTUxDNmQxNHE5anNWeWZAUZA2Jod29RVXR5S0otLWNSdDhzUF82dGFWMU5SdFVyMGZAmWUQ4RWNrTTFoM1hqQjFhQ2MZD`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch((error) => console.error(error));
-  }, []);
+export default async function InstagramPost({
+  token,
+  client,
+}: {
+  token: string;
+  client: string;
+}) {
+  const data: any = await fetch(
+    `https://graph.instagram.com/v20.0/me/media?fields=id,media_url,permalink,media_type,thumbnail_url&limit=10&access_token=IGQWROUU9MaW9PU1ZA2UVlVN3dTTGJ6cXpFckJtWGNNT2FlUGtubHhBQUZAZAT0Q4MS1JaFFqOGRDLUtuOEZAwOTBjaEhJbDJYeWVWa1luN3c0UlRMTjU5WjJfVlZA4eFZA0VlNCZA3ZAFckJvbU96SDRsenk3SDBZAUHRGbnMZD`,
+    { next: { revalidate: 3600 } }
+  );
+  const dataRes: Tdata = await data.json();
+
+  if (!dataRes) return <div>loading</div>;
+  console.log(dataRes, "data");
 
   return (
     <div className={styles.wrapperInstagram}>
       <TitleAnimations testo="BarbellGram" animation="letter" />
       <ul className={styles.wrapperInstagram__list}>
-        {data &&
-          data.data.map(
+        {dataRes &&
+          dataRes.data.map(
             (post: {
               id: string;
               media_url: string;
@@ -46,9 +44,7 @@ export default function InstagramPost({ token }: { token: any }) {
               return (
                 <li key={post.id}>
                   <a target="_blank" href={post.permalink}>
-                    {loading ? (
-                      <div>loading</div>
-                    ) : post.media_type === "VIDEO" ? (
+                    {post.media_type === "VIDEO" ? (
                       <ImagePreload
                         src={post.thumbnail_url}
                         type="fixed"
