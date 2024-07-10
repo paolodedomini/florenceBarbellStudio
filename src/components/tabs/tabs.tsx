@@ -67,16 +67,11 @@ function TabBody({ tabData }: { tabData: Tdata | undefined }) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, transition: { duration: 0.3 } }}
             >
-              <Image
-                src={tabData.image}
-                alt={tabData?.titolo}
-                layout="fill"
-                quality={100}
-              />
               <ImagePreload
                 src={tabData.image}
                 alt={tabData?.titolo}
                 type="fill"
+                isLazy={true}
               />
             </motion.div>
           ) : (

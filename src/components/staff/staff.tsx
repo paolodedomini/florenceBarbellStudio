@@ -22,7 +22,12 @@ function SingleStaff({ data }: { data: Tdata }) {
     <>
       <li onClick={() => setModal(true)}>
         <div className={style.staff__image}>
-          <ImagePreload src={data.image} alt={data.nome} type={"fill"} />
+          <ImagePreload
+            src={data.image}
+            alt={data.nome}
+            type={"fill"}
+            isLazy={true}
+          />
         </div>
         <div className={style.staff__nome}>
           {data.nome + " " + data.cognome}

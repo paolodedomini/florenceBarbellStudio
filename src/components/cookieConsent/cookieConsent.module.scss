@@ -1,7 +1,8 @@
 .wrapperCookie {
   position: fixed;
   background-color: $darkblue;
-  width: 30%;
+  width: 100%;
+  max-width: 520px;
   bottom: 0;
   z-index: 1000;
   padding: 2rem;

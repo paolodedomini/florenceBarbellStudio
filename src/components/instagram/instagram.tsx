@@ -1,7 +1,7 @@
 import styles from "./instagram.module.scss";
 import ImagePreload from "../loaders/imagePreLoad";
 import TitleAnimations from "../animations/titleAnimations";
-
+import Image from "next/image";
 type Tdata = {
   data: {
     id: string;
@@ -45,22 +45,20 @@ export default async function InstagramPost({
                 <li key={post.id}>
                   <a target="_blank" href={post.permalink}>
                     {post.media_type === "VIDEO" ? (
-                      <ImagePreload
+                      <Image
                         src={post.thumbnail_url}
-                        type="fixed"
+                        loading="lazy"
                         width={300}
                         height={300}
                         alt="instagram post"
-                        isLazy={true}
                       />
                     ) : (
-                      <ImagePreload
+                      <Image
                         src={post.media_url}
-                        type="fixed"
+                        loading="lazy"
                         width={300}
                         height={300}
                         alt="instagram post"
-                        isLazy={true}
                       />
                     )}
                   </a>

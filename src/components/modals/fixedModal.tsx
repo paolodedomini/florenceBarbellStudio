@@ -66,6 +66,7 @@ function FixedModal({
               src={dataScheda.image}
               alt={dataScheda.nome}
               layout={"fill"}
+              loading="lazy"
             />
           </motion.div>
           <motion.div
