@@ -1,0 +1,55 @@
+{
+    "titolo": "Personal Training",
+    "testo1": "Il Personal Training è un allenamento personalizzato, ricamato completamente sugli obiettivi,sulle necessità e sulle caratteristiche del cliente.<br/>Questo tipo di allenamento, proprio perché unico e diverso per ogni persona, prevede più fasi preparatorie:",
+    "lista1": [
+        {
+            "titolo": "Valutazione iniziale",
+            "testo": "È un’intervista conoscitiva fra il Personal Trainer (PT, allenatore) e il cliente. Durante questo incontro, il cliente dovrà informare il PT del proprio stato di salute e della storia medica che lo contraddistingue, e successivamente potrà esporre gli obiettivi che intende raggiungere, il tempo che potrà dedicare all’attività fisica e il luogo in cui intende svolgerla (a casa propria, in palestra, in uno studio privato)."
+        },
+        {
+            "titolo": "Valutazione antropometrica e funzionale",
+            "testo": "Una volta che il Personal Trainer e il cliente si sono accordati sull’obiettivo da raggiungere insieme, sarà cura dell’allenatore testare le capacità fisiche del soggetto, soprattutto in caso di infortuni/operazioni pregresse o di problemi di salute/posturali/motori in particolare. In questo modo, emergeranno eventuali limiti fisici del cliente, di cui il PT DOVRÀ tenere conto in fase di redazione del programma di allenamento."
+        },
+        {
+            "titolo": "Redazione e spiegazione del programma di allenamento",
+            "testo": "IA questo punto, il Personal Trainer redige un programma di allenamento che permetta al cliente di raggiungere i propri obiettivi, e che tenga conto di tutte le variabili (tempo, stato di salute, limiti fisici, ecc..) emerse durante l’analisi iniziale e la valutazione funzionale. Una volta redatta la programmazione, sarà cura dell’allenatore spiegarla sia nella sua interezza che nel dettaglio. Ogni singolo esercizio verrà quindi mostrato e spiegato, e successivamente verrà chiesto al soggetto di provare in prima persona, così da essere corretto in caso di errori."
+        }
+    ],
+    "testo2": "Ogni cliente potrà scegliere diverse modalità di allenamento, consigliato anche dal proprio allenatore:",
+    "lista2": [
+        {
+            "titolo": "One to one",
+            "testo": "È un’intervista conoscitiva fra il Personal Trainer (PT, allenatore) e il cliente. Durante questo incontro, il cliente dovrà informare il PT del proprio stato di salute e della storia medica che lo contraddistingue, e successivamente potrà esporre gli obiettivi che intende raggiungere, il tempo che potrà dedicare all’attività fisica e il luogo in cui intende svolgerla (a casa propria, in palestra, in uno studio privato)."
+        },
+        {
+            "titolo": "A distanza/online",
+            "testo": "Una volta che il Personal Trainer e il cliente si sono accordati sull’obiettivo da raggiungere insieme, sarà cura dell’allenatore testare le capacità fisiche del soggetto, soprattutto in caso di infortuni/operazioni pregresse o di problemi di salute/posturali/motori in particolare. In questo modo, emergeranno eventuali limiti fisici del cliente, di cui il PT DOVRÀ tenere conto in fase di redazione del programma di allenamento."
+        }
+    ],
+    "testo3": "Remise en forme",
+    "lista3": [
+        {
+            "titolo": "Dimagrimento",
+            "testo": "Questa programmazione permette al soggetto di scolpire il proprio fisico, diminuendo peso e centimetri, e aumentando la tonicità dei tessuti."
+        },
+        {
+            "titolo": "Aumento di massa",
+            "testo": "Questa programmazione permette al soggetto di recuperare peso e tonicità muscolare, ad esempio in situazioni post-intervento o in caso di anziani che iniziano a notare un decadimento fisico o altro."
+        },
+        {
+            "titolo": "Tonificazione",
+            "testo": "Questa programmazione punta principalmente alla tonificazione del fisico e al miglioramento delle “forme”."
+        }
+    ],
+    "testo4": "<p>Il <strong>Personal Training </strong>può essere specifico per la <a href='/preparazione-atletica-firenze/'>Preparazione Atletica</a>, &nbsp;<a href='/corsi-di-powerlifting-firenze/'>Powerlifting</a>,&nbsp;<a href='/allenamento-funzionale-firenze/'>allenamento funzionale</a>,&nbsp;<a href='/corsi-di-weightlifting-e-pesistica-olimpica-firenze/'>pesistica olimpica</a> o per la <a href='/riatletizzazione-e-recupero-post-infortunio/'>riatletizzazione e recupero post infortunio</a>.</p><p>Inoltre durante le sedute di <strong>Personal Trainig</strong> sarà possibile nella fase di anamnesi iniziale, in accordo con l'allenatore, ricevere <a href='/valutazione-funzionale-e-test-di-performance-firenze/'>valutazioni funzionali</a> e della <a href='/valutazione-della-composizione-corporea-firenze/'>composizione corporea</a>.</p>",
+    "lista4": [
+        {
+            "titolo": "Prezzo del corso",
+            "testo": "<u> lezione singola</u><br>40€<br><u>Pacchetto da 10 lezioni: </u><br>35€/lezione per un totale di 350€<br><u>Pacchetto da 15 o più lezioni:</u><br>30€/lezione<br><br><b>Prezzi degli small group:</b><br>2 persone: 30€/lezione<br>3 persone: 25€/lezione<br>4 persone: 20€/lezione<br>Per programmi (schede d’allenamento) personalizzati non esitate a contattarci."
+        },
+        {
+            "titolo": "sede del corso",
+            "testo": "Come molti altri servizi, questo tipo di allenamento è possibile farlo in presenza presso lo studio Florence Barbell a Firenze in Via Guglielmo Pepe 47 (zona Le Cure), o tramite il servizio di Coaching online."
+        }
+    ]
+}

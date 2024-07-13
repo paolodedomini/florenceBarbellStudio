@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from "react";
 import cookie from "js-cookie";
 import style from "./cookieConsent.module.scss";
+import { useRouter } from "next/navigation";
 
 const CookieConsentBanner = () => {
+  const { push } = useRouter();
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -22,6 +24,7 @@ const CookieConsentBanner = () => {
   const handleReject = () => {
     setShowBanner(false);
     cookie.set("cookieConsent", "rejected", { expires: 365 });
+    push("https://google.com");
   };
 
   if (!showBanner) {

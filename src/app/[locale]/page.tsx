@@ -28,7 +28,7 @@ const InstagramPost = dynamic(() => import("@/components/instagram/instagram"));
 
 /**
  * PAGINA
- * Utilizzare le pagine per fetchare i dati e passarli ai componenti
+ * Utilizzare le pagine per fetch dei dati e passarli ai componenti
  * Mantenere le pagine componenti server-side
  * Passare i dati ai componenti tramite props
  */
