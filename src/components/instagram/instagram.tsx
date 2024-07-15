@@ -20,8 +20,7 @@ export default async function InstagramPost({
   client: string;
 }) {
   const data: any = await fetch(
-    `https://graph.instagram.com/v20.0/me/media?fields=id,media_url,permalink,media_type,thumbnail_url&limit=10&access_token=IGQWRQUFF3R0RILUp5WW5RREdPNXYxWjFzT0ZAmUE81eFQzaEtLTzEzOFB4QVdSd0JOMmZALQzVJckNZAMGczQzJzd3U0bEprcl9OYldockVxWmpnanBUdWpLWHlGSUVnb3R6N3lmdGluT3NvQVVfRzNyTjB0N3hUaGMZD`,
-    { next: { revalidate: 3600 } }
+    `https://graph.instagram.com/v20.0/me/media?fields=id,media_url,permalink,media_type,thumbnail_url&limit=10&access_token=IGQWROVFpRckFvVkIwMExkTkVHbEcwRHRfTEJ4SWZAqV2pyblowaHQzMXhvYXR4U0NieFJoTFZAEWFE1ZA2ZAVZAzRpU19DS25ZAN2d4R004N1pOYWhtWkxScEd3RGZA2SGl4Y1J0MXVvU0hseXdvdwZDZD`
   );
   const dataRes: Tdata = await data.json();
 
