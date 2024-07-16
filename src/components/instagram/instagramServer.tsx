@@ -1,8 +1,7 @@
-"use client";
 import styles from "./instagram.module.scss";
+import ImagePreload from "../loaders/imagePreLoad";
 import TitleAnimations from "../animations/titleAnimations";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 type Tdata = {
   data: {
     id: string;
@@ -13,44 +12,28 @@ type Tdata = {
   }[];
 };
 
-export default function InstagramPost({
+export default async function InstagramPostServer({
   token,
   client,
 }: {
   token: string;
   client: string;
 }) {
-  const [data, setData] = useState<Tdata | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const data: any = await fetch(
+    `https://graph.instagram.com/v20.0/me/media?fields=id,media_url,permalink,media_type,thumbnail_url&limit=10&access_token=IGQWRORkRfdkJaaHNQZAWJMQ2pjQm1Xc1htVnJ4R2ZAicmM0RXQzQzJaQVBJaW51Y2p3LWNfVF9Tdld0U2pqV0FtdEFhelhwVHNfc19ZANUZANb2ZA6NW1zT2pReVh1LWlGVGhXeUkzZA3pFQ2RkbElPOFhiRkpiMVA3VEUZD`,
+    { next: { revalidate: 3600 } }
+  );
+  const dataRes: Tdata = await data.json();
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data: any = fetch(
-          `https://graph.instagram.com/v20.0/me/media?fields=id,media_url,permalink,media_type,thumbnail_url&limit=10&access_token=IGQWROVFpRckFvVkIwMExkTkVHbEcwRHRfTEJ4SWZAqV2pyblowaHQzMXhvYXR4U0NieFJoTFZAEWFE1ZA2ZAVZAzRpU19DS25ZAN2d4R004N1pOYWhtWkxScEd3RGZA2SGl4Y1J0MXVvU0hseXdvdwZDZD`
-        );
-        const dataRes: Tdata = await data.json();
-        setData(dataRes);
-        console.log(data, "dataRes");
-      } catch (error: any) {
-        setError(error.message);
-        console.log(error.message);
-      }
-    }
-    fetchData();
-  }, []);
+  if (!dataRes) return <div>loading</div>;
+  console.log(dataRes, "data");
 
   return (
     <div className={styles.wrapperInstagram}>
       <TitleAnimations testo="BarbellGram" animation="letter" />
-      <iframe
-        src="https://widgets.sociablekit.com/instagram-feed/iframe/25437532"
-        width="100%"
-        height="1000"
-      ></iframe>
       <ul className={styles.wrapperInstagram__list}>
-        {data &&
-          data.data?.map(
+        {dataRes &&
+          dataRes.data?.map(
             (post: {
               id: string;
               media_url: string;
