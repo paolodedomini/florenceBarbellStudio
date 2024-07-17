@@ -1,0 +1,31 @@
+{
+    "titolo": "Powerlifting",
+    "sottotitolo": "Cosa è il Powerlifting:",
+    "testo1": "Il Powerlifting è uno sport individuale il cui obiettivo è sollevare la maggior quantità di peso possibile nello squat, nella panca e nello stacco da terra in una specifica categoria di peso ed età.Esso prevede quindi l’esercitazione su questi 3 esercizi che prendono il nome di Fondamentali o nel gergo i “3 Big”.<br/> Possiamo definirlo come lo Sport della forza per eccellenza, perché appunto va a testare la massima forza che si riesce ad esprimere in queste 3 discipline. <br/>Per chi si volesse cimentare nelle competizioni, come nella Pesistica Olimpica, deve sapere che gli atleti hanno tre tentativi per raggiungere la loro capacità massima di sollevamento e devono seguire regole tecniche rigorose in modo che tutti siano confrontati allo stesso modo. Ad esempio, durante lo squat, tutti devono accovacciarsi a una certa profondità, altrimenti il sollevamento non sarà valido.",
+    "lista1": [
+        {
+            "titolo": "A chi è rivolto?",
+            "testo": "Questo tipo di allenamento è rivolto a chiunque voglia allenarsi senza troppi fronzoli su movimenti comuni negli schemi motori umani, migliorando la propria forza ed estetica, creando un fisico capace di movimentare grossi carichi senza il rischio di farsi male."
+        },
+        {
+            "titolo": "Requisiti del corso",
+            "testo": "L’allenamento sui tre fondamentali non ha limiti di età e sesso. Logicamente sarà a cura dell’allenatore in accordo con il cliente fare valutazioni nel caso in cui si voglia affrontare un piano agonistico per competere.<br/>Inoltre, è corretto ricordare che l’Organizzazione Mondiale della Sanità (OMS) ha inserito nelle nuove linee guida l’utilizzo dei sovraccarichi (Allenamento contro resistenza) per il miglioramento della salute generale, in particolar modo per contrastare il decadimento fisico dato dall’invecchiamento."
+        },
+        {
+            "titolo": "Posso fare Powerlifting anche senza competere?",
+            "testo": "Assolutamente SI! La competizione è soltanto una parte ultima di questo sport e tipo di allenamento. È possibile allenarsi su schemi di powerlifting senza dover competere, difatti non è raro trovare all’interno dei nostri programmi di allenamento, anche generici ad esempio per il Fitness, movimenti propri del powerlifting."
+        },
+        {
+            "titolo": "Argomenti e programma del corso",
+            "testo": "<p>L’allenamento di Powerlifting prevede un focus sulla cura del miglioramento della forza generale e specifica nei 3 movimenti base con l’aggiunta di esercizi spesso detti “accessori” che permettono un ulteriore miglioramento e crescita fisica.</p><ul><li>Riscaldamento generale e mobilità</li><li>Riscaldamento specifico</li><li>Fase di Tecnica e Forza su uno o più fondamentali (Squat - Panca - Stacco)</li><li>Esercizi accessori</li><li>Stretching</li></ul>"
+        },
+        {
+            "titolo": "Prezzo del corso",
+            "testo": "<div ><u> lezione singola</u><br>40€<br><u>Pacchetto da 10 lezioni: </u><br>35€/lezione per un totale di 350€<br><u>Pacchetto da 15 o più lezioni:</u><br>30€/lezione<br><br><b>Prezzi degli small group:</b><br>2 persone: 30€/lezione<br>3 persone: 25€/lezione<br>4 persone: 20€/lezione<br>Per programmi (schede d’allenamento) personalizzati non esitate a contattarci.</div>"
+        },
+        {
+            "titolo": "Sede del Corso",
+            "testo": "Come molti altri servizi, questo tipo di allenamento è possibile farlo in presenza presso lo studio Florence Barbell a Firenze in Via Guglielmo Pepe 47 (zona Le Cure), o tramite il servizio di Coaching online."
+        }
+    ]
+}

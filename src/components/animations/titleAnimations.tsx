@@ -8,10 +8,14 @@ function TitleAnimations({
   testo,
   subtesto,
   animation,
+  className,
+  isMainTitle,
 }: {
   testo: string;
   subtesto?: string;
   animation: "letter" | "word";
+  className?: string;
+  isMainTitle?: boolean;
 }) {
   function testoToArray(testo: string, animation: "letter" | "word") {
     if (animation === "word") {
@@ -43,37 +47,71 @@ function TitleAnimations({
       },
     },
   };
-  return (
-    <motion.div
-      className={style.titleAnimationsWrapper}
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-    >
-      {testoToArray(testo, animation).map((item, index) => {
-        if (item === " ") {
-          return <span key={index}>&nbsp;</span>;
-        }
-        return (
-          <motion.span
-            className={`${animation === "word" && style.word}`}
-            variants={letter}
-            key={index}
-          >
-            {item}
-          </motion.span>
-        );
-      })}
-      <motion.div
-        className={style.sub}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
+  if (isMainTitle) {
+    return (
+      <motion.h1
+        className={`${style.titleAnimationsWrapper} ${className}`}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
       >
-        {subtesto}
+        {testoToArray(testo, animation).map((item, index) => {
+          if (item === " ") {
+            return <span key={index}>&nbsp;</span>;
+          }
+          return (
+            <motion.span
+              className={`${animation === "word" && style.word}`}
+              variants={letter}
+              key={index}
+            >
+              {item}
+            </motion.span>
+          );
+        })}
+        <motion.div
+          className={style.sub}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+        >
+          {subtesto}
+        </motion.div>
+      </motion.h1>
+    );
+  } else {
+    return (
+      <motion.div
+        className={`${style.titleAnimationsWrapper} ${className}`}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+      >
+        {testoToArray(testo, animation).map((item, index) => {
+          if (item === " ") {
+            return <span key={index}>&nbsp;</span>;
+          }
+          return (
+            <motion.span
+              className={`${animation === "word" && style.word}`}
+              variants={letter}
+              key={index}
+            >
+              {item}
+            </motion.span>
+          );
+        })}
+        <motion.div
+          className={style.sub}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+        >
+          {subtesto}
+        </motion.div>
       </motion.div>
-    </motion.div>
-  );
+    );
+  }
 }
 
 export default TitleAnimations;

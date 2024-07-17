@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import Switcher from "@/components/languageSwitcher/switcher";
 
 function NavBar() {
   const pathN = usePathname();
@@ -59,7 +58,7 @@ function NavBar() {
               />
             ) : (
               <Image
-                src="/image/florencebarbellstudiologo.png"
+                src="/image/florencebarbellstudiologoInverted.jpg"
                 width={300}
                 height={58}
                 alt="logo"
@@ -91,9 +90,6 @@ function NavBar() {
                 )}
               </li>
             ))}
-            <li>
-              <Switcher isHome={isHome()} />
-            </li>
           </ul>
         </div>
         <div

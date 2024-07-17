@@ -5,9 +5,9 @@ import Accordion from "@/components/accordion/accordion";
 
 function PersonalTraining() {
   return (
-    <main>
-      <TitleAnimations testo={data.titolo} animation="word" />
-      <section className="interne">
+    <main className="interne">
+      <TitleAnimations testo={data.titolo} animation="word" isMainTitle />
+      <section>
         <p dangerouslySetInnerHTML={{ __html: data.testo1 }} />
         <Accordion data={data.lista1} />
         <p dangerouslySetInnerHTML={{ __html: data.testo2 }} />
