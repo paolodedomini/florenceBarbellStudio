@@ -6,13 +6,14 @@ import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import navigation from "../../../../public/data/navigation.json";
 
 function NavBar() {
   const pathN = usePathname();
   const locale = useLocale();
   const [mobile, setMobile] = useState(false);
-  const t = useTranslations("Navigation");
+  const t = navigation[locale as keyof typeof navigation];
 
   function isHome() {
     if (pathN === "/" + locale) {
@@ -20,23 +21,6 @@ function NavBar() {
     }
     return false;
   }
-
-  const data = {
-    nav: [
-      {
-        title: t("azienda.titolo"),
-        url: "/" + locale + t("azienda.url"),
-      },
-      {
-        title: t("contatti.titolo"),
-        url: t("contatti.url"),
-      },
-      {
-        title: t("lavora_con_noi.titolo"),
-        url: "/" + locale + t("lavora_con_noi.url"),
-      },
-    ],
-  };
 
   useEffect(() => {
     setMobile(false);
@@ -78,16 +62,14 @@ function NavBar() {
           </div>
           <hr />
           <ul className={style.mainNavBar__navBlock__nav}>
-            {data.nav.map((item, index) => (
+            {t.map((item: { name?: string; url?: string }, index) => (
               <li
-                className={`${pathN.includes(item.url) && style.activeLink}`}
+                className={`${
+                  pathN.includes(item.url || "") && style.activeLink
+                }`}
                 key={index}
               >
-                {item.title === "contatti" ? (
-                  <a href={item.url}>{item.title}</a>
-                ) : (
-                  <Link href={item.url}>{item.title}</Link>
-                )}
+                <Link href={item.url || ""}>{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -126,14 +108,14 @@ function NavBar() {
               </a>
 
               <ul className={style.navMobile__nav}>
-                {data.nav.map((item, index) => (
+                {t.map((item, index) => (
                   <li
                     className={`${
-                      pathN.includes(item.url) && style.activeLink
+                      pathN.includes(item.url || "") && style.activeLink
                     }`}
                     key={index}
                   >
-                    <Link href={item.url}>{item.title}</Link>
+                    <Link href={item.url || ""}>{item.name}</Link>
                   </li>
                 ))}
               </ul>

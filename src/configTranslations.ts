@@ -5,18 +5,38 @@ export const locales = ['it'] as const;
 
 export const pathnames: Pathnames<typeof locales> = {
     '/': '/',
-    '/azienda': {
-        it: '/azienda',
+    '/contatti': {
+        it: '/contatti',
 
     },
-    '/lavora_con_noi': {
-        it: '/lavora_con_noi',
+    '/servizi/personal-training': {
+        it: '/servizi/personal-training',
 
     },
-    '/vts_usa_inc': {
-        it: '/vts_usa_inc',
-
-    }
+    '/servizi/preparazione-atletica': {
+        it: '/servizi/preparazione-atletica',
+    },
+    '/servizi/allenamento-funzionale': {
+        it: '/servizi/allenamento-funzionale',
+    },
+    '/servizi/pesistica-olimpica': {
+        it: '/servizi/pesistica-olimpica',
+    },
+    '/servizi/powerlifting': {
+        it: '/servizi/powerlifting',
+    },
+    '/servizi/riatletizzazione-e-recupero-post-infortunio': {
+        it: '/servizi/riatletizzazione-e-recupero-post-infortunio',
+    },
+    '/servizi/valutazione-della-composizione-corporea': {
+        it: '/servizi/valutazione-della-composizione-corporea',
+    },
+    '/servizi/valutazione-funzionale-e-test-di-performance': {
+        it: '/servizi/valutazione-funzionale-e-test-di-performance',
+    },
+    '/servizi/coaching-oline': {
+        it: '/servizi/coaching-online',
+    },
 };
 
-export const localePrefix: LocalePrefix<typeof locales> = 'always';
+export const localePrefix: LocalePrefix<typeof locales> = 'always';//'as-needed' | 'always' | 'never'

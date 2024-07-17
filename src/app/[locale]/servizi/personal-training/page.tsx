@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../../../../public/data/interne/personalTraining.json";
+import data from "../../../../../public/data/interne/personalTraining.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
 

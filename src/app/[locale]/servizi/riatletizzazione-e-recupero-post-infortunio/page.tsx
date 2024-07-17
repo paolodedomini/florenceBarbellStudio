@@ -1,9 +1,9 @@
 import React from "react";
-import data from "../../../../public/data/interne/valutazioneComposizioneCorporea.json";
+import data from "../../../../../public/data/interne/riatletizzazioneRecupero.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
 
-function ValutazioneComposizioneCorporea() {
+function RiatletizzazioneRecupero() {
   return (
     <main className="interne">
       <TitleAnimations testo={data.titolo} animation="word" isMainTitle />
@@ -15,4 +15,4 @@ function ValutazioneComposizioneCorporea() {
   );
 }
 
-export default ValutazioneComposizioneCorporea;
+export default RiatletizzazioneRecupero;

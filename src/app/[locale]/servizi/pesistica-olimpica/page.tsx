@@ -1,9 +1,9 @@
 import React from "react";
-import data from "../../../../public/data/interne/powerlifting.json";
+import data from "../../../../../public/data/interne/pesisticaOlimpica.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
 
-function Powerlifting() {
+function PesisticaOlimpica() {
   return (
     <main className="interne">
       <TitleAnimations testo={data.titolo} animation="word" isMainTitle />
@@ -15,4 +15,4 @@ function Powerlifting() {
   );
 }
 
-export default Powerlifting;
+export default PesisticaOlimpica;

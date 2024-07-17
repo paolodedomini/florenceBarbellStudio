@@ -1,9 +1,9 @@
 import React from "react";
-import data from "../../../../public/data/interne/pesisticaOlimpica.json";
+import data from "../../../../../public/data/interne/valutazioneComposizioneCorporea.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
 
-function PesisticaOlimpica() {
+function ValutazioneComposizioneCorporea() {
   return (
     <main className="interne">
       <TitleAnimations testo={data.titolo} animation="word" isMainTitle />
@@ -15,4 +15,4 @@ function PesisticaOlimpica() {
   );
 }
 
-export default PesisticaOlimpica;
+export default ValutazioneComposizioneCorporea;
