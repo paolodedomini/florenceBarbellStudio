@@ -12,7 +12,7 @@ import navigation from "../../../../public/data/navigation.json";
 function NavBar() {
   const pathN = usePathname();
   const locale = useLocale();
-  const [mobile, setMobile] = useState(false);
+  const [mobile, setMobile] = useState(false); //chiude mobile menu al cambio di pagina
   const t = navigation[locale as keyof typeof navigation];
 
   function isHome() {
@@ -25,7 +25,7 @@ function NavBar() {
   useEffect(() => {
     setMobile(false);
   }, [pathN]);
-
+  console.log("pathN", t);
   return (
     <header
       className={`${style.header} ${isHome() ? style.header__home : null}`}
@@ -62,16 +62,34 @@ function NavBar() {
           </div>
           <hr />
           <ul className={style.mainNavBar__navBlock__nav}>
-            {t.map((item: { name?: string; url?: string }, index) => (
-              <li
-                className={`${
-                  pathN.includes(item.url || "") && style.activeLink
-                }`}
-                key={index}
-              >
-                <Link href={item.url || ""}>{item.name}</Link>
-              </li>
-            ))}
+            {t.map(
+              (
+                item: {
+                  name?: string;
+                  url?: string;
+                  sub?: { name: string; url: string }[];
+                },
+                index
+              ) => (
+                <li
+                  className={`${
+                    item.url && pathN.includes(item.url) && style.activeLink
+                  } ${item.sub && style.hasSub}`}
+                  key={index}
+                >
+                  <Link href={item.url || ""}>{item.name}</Link>
+                  {item.sub && (
+                    <ul className={style.subNav}>
+                      {item.sub?.map((subItem, index) => (
+                        <li key={index}>
+                          <Link href={subItem.url || ""}>{subItem.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              )
+            )}
           </ul>
         </div>
         <div

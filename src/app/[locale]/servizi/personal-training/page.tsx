@@ -1,4 +1,3 @@
-import React from "react";
 import data from "../../../../../public/data/interne/personalTraining.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
@@ -6,7 +5,7 @@ import Accordion from "@/components/accordion/accordion";
 function PersonalTraining() {
   return (
     <main className="interne">
-      <TitleAnimations testo={data.titolo} animation="word" isMainTitle />
+      <TitleAnimations testo={data.titolo} animation="word" isMainTitle once />
       <section>
         <p dangerouslySetInnerHTML={{ __html: data.testo1 }} />
         <Accordion data={data.lista1} />

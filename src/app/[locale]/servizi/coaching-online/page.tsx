@@ -1,4 +1,3 @@
-import React from "react";
 import data from "../../../../../public/data/interne/coachingOnline.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 

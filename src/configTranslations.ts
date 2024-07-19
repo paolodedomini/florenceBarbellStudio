@@ -9,6 +9,10 @@ export const pathnames: Pathnames<typeof locales> = {
         it: '/contatti',
 
     },
+    '/area-utenti': {
+        it: '/area-utenti',
+
+    },
     '/servizi/personal-training': {
         it: '/servizi/personal-training',
 
@@ -34,7 +38,7 @@ export const pathnames: Pathnames<typeof locales> = {
     '/servizi/valutazione-funzionale-e-test-di-performance': {
         it: '/servizi/valutazione-funzionale-e-test-di-performance',
     },
-    '/servizi/coaching-oline': {
+    '/servizi/coaching-online': {
         it: '/servizi/coaching-online',
     },
 };

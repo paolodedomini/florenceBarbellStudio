@@ -73,8 +73,40 @@
       }
     }
     &__nav {
+      width: 450px;
       display: flex;
       gap: 2rem;
+      position: relative;
+
+      .hasSub {
+        &:hover {
+          .subNav {
+            opacity: 1;
+            height: auto;
+          }
+        }
+      }
+      .subNav {
+        position: absolute;
+        overflow: hidden;
+        height: 0px;
+        width: 100%;
+        top: 20px;
+        opacity: 0;
+        transition: opacity ease-in-out 0.3s;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0;
+        li {
+          padding: 0.5rem 0;
+
+          cursor: pointer;
+          a {
+            white-space: nowrap;
+            padding-left: 1rem;
+            color: white;
+          }
+        }
+      }
       a {
         text-decoration: none;
         text-transform: uppercase;
