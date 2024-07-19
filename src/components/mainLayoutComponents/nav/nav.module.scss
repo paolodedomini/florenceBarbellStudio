@@ -145,7 +145,43 @@
   padding-top: 3rem;
   flex-direction: column;
   font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
   z-index: 100;
+  li {
+    a {
+      font-weight: normal;
+      text-decoration: none;
+    }
+  }
+  .hasSub {
+    &:hover {
+      .subNav {
+        opacity: 1;
+        height: auto;
+        padding: 1rem;
+      }
+    }
+  }
+  .subNav {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+
+      cursor: pointer;
+      a {
+        white-space: nowrap;
+        padding-left: 1rem;
+        color: white;
+        font-weight: normal;
+        font-size: 1.1rem;
+      }
+    }
+  }
   ul {
     margin: 1rem 0;
     text-align: center;

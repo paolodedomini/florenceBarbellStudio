@@ -126,16 +126,36 @@ function NavBar() {
               </a>
 
               <ul className={style.navMobile__nav}>
-                {t.map((item, index) => (
-                  <li
-                    className={`${
-                      pathN.includes(item.url || "") && style.activeLink
-                    }`}
-                    key={index}
-                  >
-                    <Link href={item.url || ""}>{item.name}</Link>
-                  </li>
-                ))}
+                {t.map(
+                  (
+                    item: {
+                      name?: string;
+                      url?: string;
+                      sub?: { name: string; url: string }[];
+                    },
+                    index
+                  ) => (
+                    <li
+                      className={`${
+                        item.url && pathN.includes(item.url) && style.activeLink
+                      } ${item.sub && style.hasSub}`}
+                      key={index}
+                    >
+                      <Link href={item.url || ""}>{item.name}</Link>
+                      {item.sub && (
+                        <ul className={style.subNav}>
+                          {item.sub?.map((subItem, index) => (
+                            <li key={index}>
+                              <Link href={subItem.url || ""}>
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  )
+                )}
               </ul>
               <hr style={{ width: "50%" }} />
               <div className={style.navMobile__generic}>

@@ -7,7 +7,7 @@ function RiatletizzazioneRecupero() {
     <main className="interne">
       <TitleAnimations testo={data.titolo} animation="word" isMainTitle once />
       <section>
-        <p dangerouslySetInnerHTML={{ __html: data.testo1 }} />
+        <div dangerouslySetInnerHTML={{ __html: data.testo1 }} />
         <Accordion data={data.lista1} />
       </section>
     </main>
