@@ -31,7 +31,6 @@ function SocialShare({ url, title }: { url: string; title: string }) {
       </EmailShareButton>
       <FacebookShareButton
         url={"https://florencebarbellstudio.it/" + url}
-        quote={title}
         className={style.socialButton}
       >
         <FacebookIcon size={32} round />
