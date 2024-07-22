@@ -4,7 +4,6 @@ import AnimatedSection from "@/components/mainLayoutComponents/sections/animated
 import style from "./style.module.scss";
 import ImagePreload from "@/components/loaders/imagePreLoad";
 import SocialShare from "@/components/socialShare/socialShare";
-import { revalidatePath } from "next/cache";
 
 type tParams = {
   post: string;
@@ -12,7 +11,7 @@ type tParams = {
 export default async function Page({ params }: { params: tParams }) {
   const client = createClient();
   const page = await client.getByUID("blogpage", params.post);
-  revalidatePath("/it/blog/[post]", "page");
+
   return (
     <main className={style.blog}>
       <TitleAnimations
