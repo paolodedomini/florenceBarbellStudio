@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "fallen",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum amet minim anim ullamco. Id sint reprehenderit occaecat ipsum aliqua pariatur excepteur ut labore adipisicing sit enim nulla. Reprehenderit nisi dolor laborum sit adipisicing mollit et consectetur Lorem est occaecat."
+						}
+					}
+				]
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "ill",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

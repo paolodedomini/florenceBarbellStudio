@@ -46,6 +46,10 @@
             "url": "/it/contatti"
         },
         {
+            "name": "Blog",
+            "url": "/it/blog"
+        },
+        {
             "name": "Area Utenti",
             "url": "/it/area-utenti"
         }

@@ -89,6 +89,7 @@ function TitleAnimations({
         variants={container}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: once || false }}
       >
         {testoToArray(testo, animation).map((item, index) => {
           if (item === " ") {

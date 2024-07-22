@@ -13,6 +13,9 @@ export const pathnames: Pathnames<typeof locales> = {
         it: '/area-utenti',
 
     },
+    '/blog': {
+        it: '/blog',
+    },
     '/servizi/personal-training': {
         it: '/servizi/personal-training',
 
