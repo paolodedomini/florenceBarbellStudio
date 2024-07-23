@@ -41,13 +41,14 @@
                 }
             ]
         },
-        {
-            "name": "Contatti",
-            "url": "/it/contatti"
-        },
+      
         {
             "name": "Blog",
             "url": "/it/blog"
+        },
+        {
+            "name": "Contatti",
+            "url": "/it/contatti"
         },
         {
             "name": "Area Utenti",
