@@ -1,4 +1,5 @@
 import { createClient } from "@/prismicio";
+import { PrismicRichText, JSXMapSerializer } from "@prismicio/react";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
 import style from "./style.module.scss";
@@ -12,6 +13,21 @@ export default async function Page({ params }: { params: tParams }) {
   const client = createClient();
   const page = await client.getByUID("blogpage", params.post);
 
+  //oggetto per la configurazione del rich text di prismic.io
+  const components: JSXMapSerializer = {
+    heading1: ({ children }) => <h2>{children}</h2>,
+    oList: ({ children }) => {
+      return (
+        <ol>
+          {children.map((child, index) => (
+            <li key={index}>{child}</li>
+          ))}
+        </ol>
+      );
+    },
+  };
+
+  console.log(page.data.content, "pagedata");
   return (
     <main className={style.blog}>
       <TitleAnimations
@@ -29,27 +45,7 @@ export default async function Page({ params }: { params: tParams }) {
       </div>
       <SocialShare url={params.post} title={page.data.titolo as string} />
       <AnimatedSection width="866px">
-        {page.data.content.map((item, index) => {
-          console.log(item);
-          if (item.type === "paragraph") {
-            return (
-              <p key={index} dangerouslySetInnerHTML={{ __html: item.text }} />
-            );
-          }
-          if (item.type === "image") {
-            return (
-              <div key={index} className={style.blogImage}>
-                <ImagePreload
-                  src={item.url || ""}
-                  alt={item.alt || "image"}
-                  type="fixed"
-                  width={item.url ? item.dimensions.width : 0}
-                  height={item.url ? item.dimensions.height : 0}
-                />
-              </div>
-            );
-          }
-        })}
+        <PrismicRichText field={page.data.content} components={components} />
       </AnimatedSection>
     </main>
   );

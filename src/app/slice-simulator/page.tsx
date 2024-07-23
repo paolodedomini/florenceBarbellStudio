@@ -10,6 +10,9 @@ import { components } from "../../slices";
 export default function SliceSimulatorPage({
   searchParams,
 }: SliceSimulatorParams) {
+  /**
+   * COMPONENTE PER IL BACKEND DI PRISMIC.IO
+   */
   const slices = getSlices(searchParams.state);
 
   return (

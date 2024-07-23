@@ -9,7 +9,22 @@ type Taddress = {
   number?: string;
   street: string;
 };
-
+function createAddress(
+  street: string | null,
+  city: string | null,
+  numero: string | null
+): string | null {
+  if (city && street) {
+    const streetsplit = street?.split(" ");
+    const address = streetsplit?.join("+");
+    const citySplit = city?.split(" ");
+    const cityAddress = citySplit?.join("+");
+    const addressString = `${address}+${numero}+${cityAddress}`;
+    return addressString;
+  } else {
+    return null;
+  }
+}
 async function fetchMapData(indirizzo: string) {
   console.log("fetchMapData" + indirizzo);
   const data = await fetch(
@@ -28,23 +43,7 @@ function LeafletMain({ address }: { address: Taddress | null }) {
   const [mapdata, setMapdata] = useState<any | undefined>([]);
   const [error, setError] = useState("");
 
-  function createAddress(
-    street: string | null,
-    city: string | null,
-    numero: string | null
-  ): string | null {
-    if (city && street) {
-      const streetsplit = street?.split(" ");
-      const address = streetsplit?.join("+");
-      const citySplit = city?.split(" ");
-      const cityAddress = citySplit?.join("+");
-      const addressString = `${address}+${numero}+${cityAddress}`;
-      return addressString;
-    } else {
-      return null;
-    }
-  }
-  console.log(address);
+  console.log(address, "address");
   useEffect(() => {
     async function fetchData(address: Taddress) {
       const addressComposed = createAddress(
@@ -62,6 +61,7 @@ function LeafletMain({ address }: { address: Taddress | null }) {
         setError(data.error);
       }
     }
+
     if (address !== null) {
       fetchData(address);
     }

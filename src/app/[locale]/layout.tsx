@@ -53,6 +53,7 @@ export default async function RootLayout({
       <head>
         {/* COMPONENTE PER INSERIRE I META JSONLD PER GOOGLE  */}
         <JsonldMetaData metadata={meta} />
+        <link rel="icon" href="/image/favicon.ico" />
       </head>
       <body className={`${oswald.variable} ${outfit.variable}`}>
         <CookieConsentBanner />
