@@ -27,55 +27,55 @@ function SocialShare({ url, title }: { url: string; title: string }) {
         body="body"
         className={style.socialButton}
       >
-        <EmailIcon size={32} round />
+        <EmailIcon size={25} round />
       </EmailShareButton>
       <FacebookShareButton
         url={"https://florencebarbellstudio.it/" + url}
         className={style.socialButton}
       >
-        <FacebookIcon size={32} round />
+        <FacebookIcon size={25} round />
       </FacebookShareButton>
       <LinkedinShareButton
         url={"https://florencebarbellstudio.it/" + url}
         title={title}
         className={style.socialButton}
       >
-        <LinkedinIcon size={32} round />
+        <LinkedinIcon size={25} round />
       </LinkedinShareButton>
       <PinterestShareButton
         url={"https://florencebarbellstudio.it/" + url}
         media={"https://florencebarbellstudio.it/" + url}
         className={style.socialButton}
       >
-        <PinterestIcon size={32} round />
+        <PinterestIcon size={25} round />
       </PinterestShareButton>
       <RedditShareButton
         url={"https://florencebarbellstudio.it/" + url}
         title={title}
         className={style.socialButton}
       >
-        <RedditIcon size={32} round />
+        <RedditIcon size={25} round />
       </RedditShareButton>
       <TelegramShareButton
         url={"https://florencebarbellstudio.it/" + url}
         title={title}
         className={style.socialButton}
       >
-        <TelegramIcon size={32} round />
+        <TelegramIcon size={25} round />
       </TelegramShareButton>
       <TwitterShareButton
         url={"https://florencebarbellstudio.it/" + url}
         title={title}
         className={style.socialButton}
       >
-        <TwitterIcon size={32} round />
+        <TwitterIcon size={25} round />
       </TwitterShareButton>
       <WhatsappShareButton
         url={"https://florencebarbellstudio.it/" + url}
         title={title}
         className={style.socialButton}
       >
-        <WhatsappIcon size={32} round />
+        <WhatsappIcon size={25} round />
       </WhatsappShareButton>
     </div>
   );

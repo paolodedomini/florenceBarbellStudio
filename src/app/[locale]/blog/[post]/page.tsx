@@ -16,13 +16,13 @@ export default async function Page({ params }: { params: tParams }) {
   //oggetto per la configurazione del rich text di prismic.io
   const components: JSXMapSerializer = {
     heading1: ({ children }) => <h2>{children}</h2>,
+    list: ({ children }) => (
+      <ul className={style.listaBlog}>{children.map((child) => child)}</ul>
+    ),
     oList: ({ children }) => {
+      console.log(children, "children");
       return (
-        <ol>
-          {children.map((child, index) => (
-            <li key={index}>{child}</li>
-          ))}
-        </ol>
+        <ul className={style.listaBlog}>{children.map((child) => child)}</ul>
       );
     },
   };
