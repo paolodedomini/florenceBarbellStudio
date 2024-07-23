@@ -11,6 +11,7 @@ import Footer from "@/components/mainLayoutComponents/footer/footer";
 import footerData from "../../../public/data/footer.json";
 import CookieConsentBanner from "@/components/cookieConsent/cookieConsent";
 import ScrollTop from "@/components/scroll/scrollToTop";
+
 const oswald = Oswald({
   subsets: ["latin"],
   weight: ["200", "400", "700"],
@@ -40,12 +41,12 @@ export async function generateMetadata({
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(params.locale);
   const messages = await getMessages();
 
   return (
@@ -57,7 +58,7 @@ export default async function RootLayout({
       </head>
       <body className={`${oswald.variable} ${outfit.variable}`}>
         <CookieConsentBanner />
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={params.locale}>
           <Nav />
           <SmoothScrolling>{children}</SmoothScrolling>
           <Footer data={footerData} />

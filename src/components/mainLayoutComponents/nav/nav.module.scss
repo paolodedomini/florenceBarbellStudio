@@ -68,8 +68,12 @@
     }
     &__topData {
       text-transform: uppercase;
+
       @media #{$landscape} {
         display: none;
+      }
+      a {
+        color: black;
       }
     }
     &__nav {

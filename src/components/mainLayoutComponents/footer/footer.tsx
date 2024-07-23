@@ -2,6 +2,7 @@
 import Image from "next/image";
 import style from "./footer.module.scss";
 import { useLocale } from "next-intl";
+import { useParams } from "next/navigation";
 import LeafletMain from "@/components/map/Leaflet";
 type Tdata = {
   it: {
@@ -37,12 +38,14 @@ function Footer({ data }: { data: Tdata }) {
   };
 
   const footerData = data[locale as keyof typeof data];
+  const searcParams: any = useParams();
+
   if (!data) {
     return null;
   }
   return (
     <>
-      <LeafletMain address={address} />
+      {!searcParams.uid && <LeafletMain address={address} />}
       <footer className={style.footer}>
         <div className={style.footer__first}>
           <Image

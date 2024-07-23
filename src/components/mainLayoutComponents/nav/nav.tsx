@@ -56,9 +56,11 @@ function NavBar() {
           }`}
         >
           <div className={style.mainNavBar__navBlock__topData}>
-            Via della Stazione 27, Barga -{" "}
-            <a href="tel:+390583711372">0575 1122334</a> -{" "}
-            <a href="mailto:info@vtservices.it">info@simplesite.it</a>
+            Via Gugliemo Pepe 47, Firenze -{" "}
+            <a href="tel:+393386988655">3386988655</a> -{" "}
+            <a href="mailto:florencebarbellstudio@gmail.com">
+              florencebarbellstudio@gmail.com
+            </a>
           </div>
           <hr />
           <ul className={style.mainNavBar__navBlock__nav}>

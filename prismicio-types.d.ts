@@ -102,7 +102,142 @@ export type BlogpageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = BlogpageDocument;
+/**
+ * Item in *Clienti → schede*
+ */
+export interface ClientiDocumentDataSchedeItem {
+  /**
+   * scheda field in *Clienti → schede*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.schede[].scheda
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  scheda: prismic.LinkField;
+}
+
+type ClientiDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Clienti documents
+ */
+interface ClientiDocumentData {
+  /**
+   * Password field in *Clienti*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.password
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  password: prismic.KeyTextField;
+
+  /**
+   * nome field in *Clienti*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.nome
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nome: prismic.KeyTextField;
+
+  /**
+   * cognome field in *Clienti*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.cognome
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cognome: prismic.KeyTextField;
+
+  /**
+   * Prossimo appuntamento field in *Clienti*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.calendario
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  calendario: prismic.DateField;
+
+  /**
+   * schede field in *Clienti*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.schede[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  schede: prismic.GroupField<Simplify<ClientiDocumentDataSchedeItem>>;
+
+  /**
+   * Slice Zone field in *Clienti*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ClientiDocumentDataSlicesSlice> /**
+   * Meta Title field in *Clienti*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: clienti.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Clienti*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: clienti.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Clienti*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clienti.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Clienti document from Prismic
+ *
+ * - **API ID**: `clienti`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ClientiDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ClientiDocumentData>,
+    "clienti",
+    Lang
+  >;
+
+export type AllDocumentTypes = BlogpageDocument | ClientiDocument;
 
 /**
  * Primary content in *BlogContent → Default → Primary*
@@ -182,6 +317,10 @@ declare module "@prismicio/client" {
       BlogpageDocument,
       BlogpageDocumentData,
       BlogpageDocumentDataSlicesSlice,
+      ClientiDocument,
+      ClientiDocumentData,
+      ClientiDocumentDataSchedeItem,
+      ClientiDocumentDataSlicesSlice,
       AllDocumentTypes,
       BlogContentSlice,
       BlogContentSliceDefaultPrimary,
