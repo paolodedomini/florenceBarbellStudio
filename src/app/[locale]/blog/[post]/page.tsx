@@ -44,7 +44,7 @@ export default async function Page({ params }: { params: tParams }) {
         />
       </div>
       <SocialShare url={params.post} title={page.data.titolo as string} />
-      <AnimatedSection width="866px">
+      <AnimatedSection>
         <PrismicRichText field={page.data.content} components={components} />
       </AnimatedSection>
     </main>
