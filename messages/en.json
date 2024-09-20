@@ -53,7 +53,7 @@
         "err_email": "pleas enter a valid email address",
         "messaggio": "Message",
         "err_messaggio": "please enter at least 10 characters",
-        "success": "<h3>Message sent</h3><p>Thank you for contacting us</p>",
+        "success": "Message sent, thank you for contacting us",
         "invia": "Send"
     }
 }

@@ -53,7 +53,7 @@
         "err_email": "Inserire un indirizzo email valido",
         "messaggio": "Messaggio",
         "err_messaggio": "Inserire almeno 10 caratteri",
-        "success": "<h3>Messaggio inviato</h3><p>Risponderemo al messaggio nel più breve tempo possibile</p>",
+        "success": "Messaggio inviato, risponderemo al messaggio nel più breve tempo possibile",
         "invia": "Invia"
     }
 }
