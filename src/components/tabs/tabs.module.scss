@@ -36,6 +36,10 @@
     @media #{$tablet} {
       flex-direction: column;
     }
+    a {
+      color: black;
+      font-weight: bold;
+    }
     &__content {
       flex: 1;
       h2 {
@@ -48,7 +52,7 @@
           font-size: 2rem;
         }
       }
-      p {
+      &__text {
         @include paragraph();
         font-size: 1.2rem;
         line-height: 2rem;

@@ -4,39 +4,42 @@
         "tabs": [
             {
                 "titolo": "Personal training, Riatletizzazione e Small Group",
-                "testo": "<strong>Il weightlifting </strong> e il <strong>powerlifting</strong> sono discipline di sollevamento pesi che richiedono forza, tecnica e determinazione. <br/> Il weightlifting si concentra sull'esecuzione di due movimenti principali: lo snatch (sollevamento da terra sopra la testa in un unico movimento fluido) e il clean and jerk (girata al petto da terra e spinta sopra la testa in due fasi separate).<br/> Il powerlifting, invece, si concentra su tre movimenti principali: lo squat (squat con bilanciere), il bench press (distensione su panca) e il deadlift (stacco da terra).<br/>  Entrambe le discipline sono indicate per atleti di ogni livello, dai principianti che vogliono imparare le basi corrette dei movimenti, agli atleti esperti che cercano di migliorare le proprie performance o partecipare a competizioni. <br/> I programmi di coaching personalizzati possono essere adattati alle esigenze e alle capacità individuali di ogni persona.",
+                "testo": "Il <a href='/it/servizi/personal-training'>Personal Training</a>, la <a href='/it/servizi/riatletizzazione-e-recupero-post-infortunio'>riatletizzazione</a> e <a href='/it/servizi/allenamento-funzionale'>l'allenamento funzionale</a> sono allenamenti personalizzati, ricamati completamente sugli obiettivi, sulle necessità e sulle caratteristiche del cliente. Questo tipo di allenamento, proprio perché unico e diverso per ogni persona, prevede più fasi preparatorie: <ul><li>Anamnesi Iniziale</li><li>Valutazione antropometrica</li> <li><a href='/it/servizi/valutazione-della-composizione-corporea'>composizione corporea</a> e <a href='/it/servizi/valutazione-funzionale-e-test-di-performance'>funzionale</a></li></ul>",
                 "image": "/image/imagetab1.jpg",
                 "link": "index.html"
             },
             {
-                "titolo": "Weightlifting, Powerlifting",
-                "testo": "<strong>Il weightlifting </strong> e il <strong>powerlifting</strong> sono discipline di sollevamento pesi che richiedono forza, tecnica e determinazione. <br/> Il weightlifting si concentra sull'esecuzione di due movimenti principali: lo snatch (sollevamento da terra sopra la testa in un unico movimento fluido) e il clean and jerk (girata al petto da terra e spinta sopra la testa in due fasi separate).<br/> Il powerlifting, invece, si concentra su tre movimenti principali: lo squat (squat con bilanciere), il bench press (distensione su panca) e il deadlift (stacco da terra).<br/>  Entrambe le discipline sono indicate per atleti di ogni livello, dai principianti che vogliono imparare le basi corrette dei movimenti, agli atleti esperti che cercano di migliorare le proprie performance o partecipare a competizioni. <br/> I programmi di coaching personalizzati possono essere adattati alle esigenze e alle capacità individuali di ogni persona.",
-                "image": "/image/imagetab2.jpg",
+                "titolo": "Preparazione atletica",
+                "testo": "La <a href='/it/servizi/preparazione-atletica'>preparazione atletica</a> è l'insieme di processi e strategie finalizzate a migliorare le capacità fisiche e le prestazioni degli atleti. È rivolta sia agli atleti praticanti sport agonistici che a quelli amatoriali. La preparazione atletica comprende la pianificazione e l'esecuzione di allenamenti specifici, mirati a sviluppare resistenza, forza, velocità e altre qualità fisiche rilevanti per la disciplina sportiva praticata. Il suo obiettivo è massimizzare le prestazioni degli atleti e prevenire gli infortuni tipici, consentendo di raggiungere il massimo potenziale nello sport specifico.",
+                "image": "/image/imagetab3.jpg",
                 "link": "contatti.html"
             },
             {
-                "titolo": "Preparazione atletica",
-                "testo": "<strong>Il weightlifting </strong> e il <strong>powerlifting</strong> sono discipline di sollevamento pesi che richiedono forza, tecnica e determinazione. <br/> Il weightlifting si concentra sull'esecuzione di due movimenti principali: lo snatch (sollevamento da terra sopra la testa in un unico movimento fluido) e il clean and jerk (girata al petto da terra e spinta sopra la testa in due fasi separate).<br/> Il powerlifting, invece, si concentra su tre movimenti principali: lo squat (squat con bilanciere), il bench press (distensione su panca) e il deadlift (stacco da terra).<br/>  Entrambe le discipline sono indicate per atleti di ogni livello, dai principianti che vogliono imparare le basi corrette dei movimenti, agli atleti esperti che cercano di migliorare le proprie performance o partecipare a competizioni. <br/> I programmi di coaching personalizzati possono essere adattati alle esigenze e alle capacità individuali di ogni persona.",
-                "image": "/image/imagetab3.jpg",
+                "titolo": "Weightlifting, Powerlifting",
+                "testo": "Il <a href='/it/servizi/pesistica-olimpica'>weightlifting</a> e il <a href='/it/servizi/powerlifting'>powerlifting</a> sono discipline di sollevamento pesi che richiedono forza, tecnica e determinazione. <br/> Il weightlifting si concentra sull'esecuzione di due movimenti principali: lo snatch (sollevamento da terra sopra la testa in un unico movimento fluido) e il clean and jerk (girata al petto da terra e spinta sopra la testa in due fasi separate).<br/> Il powerlifting, invece, si concentra su tre movimenti principali: lo squat (squat con bilanciere), il bench press (distensione su panca) e il deadlift (stacco da terra).<br/>  Entrambe le discipline sono indicate per atleti di ogni livello, dai principianti che vogliono imparare le basi corrette dei movimenti, agli atleti esperti che cercano di migliorare le proprie performance o partecipare a competizioni. <br/> I programmi di coaching personalizzati possono essere adattati alle esigenze e alle capacità individuali di ogni persona.",
+                "image": "/image/imagetab2.jpg",
                 "link": "contatti.html"
             }
         ],
-        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi.",
+        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obiettivi.",
         "list": [
             {
-                "titolo": "3 power anal Rack"
+                "titolo": "5 postazioni di lavoro"
             },
             {
-                "titolo": "5 Penis enlargement station"
+                "titolo": "Bilanceri olimpici e speciali"
             },
             {
-                "titolo": "CONCEPT 2 machines of death"
+                "titolo": "Manubri e kettlebell fino a 50 kg"
             },
             {
-                "titolo": "panche d’ogni misura"
+                "titolo": "Macchinari isotonici"
             },
             {
-                "titolo": "pesi che manco la madonna"
+                "titolo": "Bikeerg, Air dyne e Rowerg "
+            },
+            {
+                "titolo": "Strumentazione all'avanguardia per test di performance"
             }
         ],
         "carousel": [

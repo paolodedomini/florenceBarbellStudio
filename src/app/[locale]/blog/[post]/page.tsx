@@ -27,7 +27,6 @@ export default async function Page({ params }: { params: tParams }) {
     },
   };
 
-  console.log(page.data.content, "pagedata");
   return (
     <main className={style.blog}>
       <TitleAnimations

@@ -3,6 +3,7 @@ import Image from "next/image";
 import style from "./modals.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 type Tdata = {
+  status: string;
   image: string;
   nome: string;
   cognome: string;
@@ -92,9 +93,16 @@ function FixedModal({
               close
             </div>
             <div className={style.fixedModal__content__title}>
-              <h2>{dataScheda.nome + " " + dataScheda.cognome}</h2>
+              <h2>
+                {dataScheda.status +
+                  " " +
+                  dataScheda.nome +
+                  " " +
+                  dataScheda.cognome}
+              </h2>
             </div>
-            <p dangerouslySetInnerHTML={{ __html: dataScheda.descrizione }} />
+            <br />
+            {/* <p dangerouslySetInnerHTML={{ __html: dataScheda.descrizione }} /> */}
 
             <h2>SKILLS</h2>
             <ul>
@@ -102,9 +110,10 @@ function FixedModal({
                 return <li key={index}>{item}</li>;
               })}
             </ul>
+            <br />
             <h2>DOCS</h2>
             <p>
-              <a href="/doc/Gradi_Niccolo_Curriculum.pdf" target="_blank">
+              <a target="_blank" href={dataScheda.cv}>
                 Curriculum Vitae
               </a>
             </p>

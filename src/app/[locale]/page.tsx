@@ -70,7 +70,7 @@ export default async function Home({
       <div className={"wrapperFlex"}>
         <TitleAnimations
           testo="Florence Barbell GYM"
-          subtesto="300mt2 di torture"
+          subtesto="120mt2"
           animation="word"
         />
 
@@ -92,7 +92,7 @@ export default async function Home({
       <div className={"wrapperFlex"}>
         <TitleAnimations
           testo="Florence Barbell STAFF"
-          subtesto="Ti faremo vomitare sangue dal culo"
+          subtesto="Conosci il nostro staff"
           animation="word"
         />
         <Image
@@ -105,14 +105,14 @@ export default async function Home({
       <AnimatedSection overflowHidden={false}>
         <Staff data={staffData[locale as keyof typeof homeData]} />
       </AnimatedSection>
-      <AnimatedSection>
+      {/*  <AnimatedSection>
         <InstagramPost
           token={
             "IGQWROUU9MaW9PU1ZA2UVlVN3dTTGJ6cXpFckJtWGNNT2FlUGtubHhBQUZAZAT0Q4MS1JaFFqOGRDLUtuOEZAwOTBjaEhJbDJYeWVWa1luN3c0UlRMTjU5WjJfVlZA4eFZA0VlNCZA3ZAFckJvbU96SDRsenk3SDBZAUHRGbnMZD"
           }
           client={"aa5c815437121a7a8f6c2db93d8195f4"}
         />
-      </AnimatedSection>
+      </AnimatedSection> */}
       <AnimatedSection overflowHidden={false}>
         <FormSection />
       </AnimatedSection>

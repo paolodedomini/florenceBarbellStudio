@@ -85,7 +85,8 @@ function TabBody({ tabData }: { tabData: Tdata | undefined }) {
             >
               {tabData?.titolo}
             </motion.h2>
-            <motion.p
+            <motion.div
+              className={style.tabBody__content__text}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}
               exit={{ opacity: 0, transition: { duration: 0.3 } }}

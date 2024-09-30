@@ -1,9 +1,10 @@
 {
     "it": [
         {
+            "status": "Dott.",
             "nome": "Niccolò",
             "cognome": "Gradi",
-            "ruolo": "MasterBlaster",
+            "ruolo": "Chinesiologo",
             "eta": 22,
             "image": "/image/gradi.jpg",
             "descrizione": "Sono un ragazzo di 72 anni, mi piace la musica e il cinema. Sono appassionato di tecnologia e mi piace viaggiare.",
@@ -18,9 +19,10 @@
             "cv": "/doc/Gradi_Niccolo_Curriculum.pdf"
         },
         {
+            "status": "Dott.",
             "nome": "Marco",
             "cognome": "Macchioni",
-            "ruolo": "MasterBlaster",
+            "ruolo": "Chinesiologo",
             "eta": 22,
             "image": "/image/macchioni.jpg",
             "descrizione": "Sono un ragazzo di 92 anni, mi piace la musica e il cinema. Sono appassionato di tecnologia e mi piace viaggiare.",

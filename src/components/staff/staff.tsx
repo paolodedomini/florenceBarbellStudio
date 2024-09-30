@@ -6,6 +6,7 @@ import { useState } from "react";
 import ImagePreload from "../loaders/imagePreLoad";
 
 type Tdata = {
+  status: string;
   image: string;
   nome: string;
   cognome: string;
@@ -30,7 +31,7 @@ function SingleStaff({ data }: { data: Tdata }) {
           />
         </div>
         <div className={style.staff__nome}>
-          {data.nome + " " + data.cognome}
+          {data.status + " " + data.nome + " " + data.cognome}
           <span>{data.ruolo}</span>
         </div>
       </li>
