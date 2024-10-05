@@ -1,7 +1,6 @@
 import HeroVideo from "@/components/heros/Hero";
 import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
-
 import Parallax from "@/components/parallax/parallax";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
 import Tabs from "@/components/tabs/tabs";
@@ -9,7 +8,6 @@ import Staff from "@/components/staff/staff";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Image from "next/image";
 import BigList from "@/components/list/bigList";
-
 import FormSection from "@/components/form/formSection";
 /* DATA */
 import heroData from "../../../public/data/hero.json";
@@ -18,7 +16,6 @@ import staffData from "../../../public/data/staff.json";
 import Splash from "@/components/splash/splash";
 /*IMAGES*/
 import HeroImage from "../../../public/image/hero.jpg";
-
 import dynamic from "next/dynamic";
 
 const CarouselImage = dynamic(

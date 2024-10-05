@@ -7,6 +7,7 @@ import LoaderSite from "@/components/loaders/loader";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import ImagePreload from "../loaders/imagePreLoad";
+import React from "react";
 /**
  * HERO VIDEO
  * Componente per la gestione del video in homepage con testo

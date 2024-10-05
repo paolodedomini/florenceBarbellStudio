@@ -4,6 +4,7 @@ import style from "./staff.module.scss";
 import FixedModal from "../modals/fixedModal";
 import { useState } from "react";
 import ImagePreload from "../loaders/imagePreLoad";
+import React from "react";
 
 type Tdata = {
   status: string;
