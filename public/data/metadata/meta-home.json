@@ -6,65 +6,14 @@
             "openGraph": {
                 "title": "Florence Barbell Studio",
                 "description": "Esperti in Personal training, riatletizzazione e Small Group Training.",
+                "keywords": "Personal training, Allenamento funzionale, Pesistica Olimpica,Powerlifting,Riatletizzazione e recupero post infortunio,Valutazione funzionale e test di performance,Valutazione della composizione corporea, Coaching Online",
                 "type": "website",
                 "locale": "it_IT",
                 "url": "https://www.florencebarbellstudio.it/",
                 "siteName": "Florence Barbell Studio",
                 "images": [
                     {
-                        "url": "https://www.florencebarbellstudio.it/image/og-image.jpg",
-                        "width": 1200,
-                        "height": 630,
-                        "alt": "Florence Barbell Studio"
-                    }
-                ]
-            }
-        },
-        "jsonld": {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "image": [
-                "https://www.florencebarbellstudio.it/image/4_3graph.jpg",
-                "https://www.florencebarbellstudio.it/image/mainimage.jpg"
-            ],
-            "name": "Florence Barbell Studio",
-            "address": [
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": " via della stranezza 27 Mologno Barga",
-                    "addressLocality": "Lucca",
-                    "addressRegion": "Toscana",
-                    "postalCode": "55051",
-                    "addressCountry": "IT"
-                },
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "via della figata totale 27 Mologno Barga",
-                    "addressLocality": "liguria",
-                    "addressRegion": "Genova",
-                    "postalCode": "123213",
-                    "addressCountry": "GE"
-                }
-            ],
-            "url": "https://www.florencebarbellstudio.it/",
-            "telephone": "+320583711372",
-            "email": "info@test.it"
-        }
-    },
-    "en": {
-        "metaHtml": {
-            "title": "Florence Barbell Studio",
-            "description": "Esperti in Personal training, riatletizzazione e Small Group Training.",
-            "openGraph": {
-                "title": "Florence Barbell Studio",
-                "description": "Esperti in Personal training, riatletizzazione e Small Group Training.",
-                "type": "website",
-                "locale": "it_IT",
-                "url": "https://www.florencebarbellstudio.it/",
-                "siteName": "Florence Barbell Studio",
-                "images": [
-                    {
-                        "url": "https://www.florencebarbellstudio.it//image/og-image.jpg",
+                        "url": "https://www.florencebarbellstudio.it/image/opengraph-image.jpg",
                         "width": 1200,
                         "height": 630,
                         "alt": "Florence Barbell Studio"

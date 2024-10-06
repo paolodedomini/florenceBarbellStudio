@@ -2,7 +2,7 @@ import { Oswald, Outfit } from "next/font/google";
 import "@/sass/all.scss";
 import SmoothScrolling from "@/components/scroll/smoothScrolling";
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
-import meta from "../../../public/data/meta-home.json";
+import meta from "../../../public/data/metadata/meta-home.json";
 import Nav from "@/components/mainLayoutComponents/nav/nav";
 import { locales } from "../../configTranslations";
 import { unstable_setRequestLocale, getMessages } from "next-intl/server";
