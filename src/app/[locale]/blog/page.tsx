@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 async function BlogIndex() {
   const client = createClient();
   const page = await client.getAllByType("blogpage");
-  console.log(page);
 
   return (
     <main className={style.blogPage}>

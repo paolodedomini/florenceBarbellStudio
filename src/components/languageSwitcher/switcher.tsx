@@ -30,7 +30,6 @@ export default function Switcher({ isHome }: Props) {
   }
 
   useEffect(() => {
-    console.log(currentLocales, "currentLocales");
     const newLocales = currentLocales.filter((loc) => nextLocale !== loc);
     setCurrentLocales([nextLocale, ...newLocales]);
     router.replace(

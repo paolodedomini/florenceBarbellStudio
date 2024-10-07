@@ -13,9 +13,7 @@ type tScheda = { id: string; url: string; name: string };
 export default async function Page({ params }: { params: tParams }) {
   const client = createClient();
   const page = await client.getByUID("clienti", params.uid);
-  console.log(params, "params");
 
-  console.log(page.data.schede[0], "pagedata");
   return (
     <main className={style.clienti}>
       <PasswordWrapper password={page.data.password as string}>
@@ -38,7 +36,6 @@ export default async function Page({ params }: { params: tParams }) {
                 <h2>Allenamenti</h2>
                 <ul>
                   {page.data.schede.map((scheda: any, index) => {
-                    console.log(scheda, "scheda");
                     return (
                       <li key={scheda.scheda.id}>
                         <a href={scheda.scheda.url}>{scheda.scheda.name}</a>

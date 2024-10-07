@@ -10,7 +10,7 @@ type Tdata = {
 };
 function Accordion({ data }: { data: Tdata[] }) {
   const [active, setActive] = useState<number | null>(null);
-  console.log(active);
+
   return (
     <ul className={"accordion"}>
       {data.map((item, index) => {

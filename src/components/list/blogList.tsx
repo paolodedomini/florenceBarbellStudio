@@ -4,7 +4,7 @@ import style from "./list.module.scss";
 
 function BlogList({ posts }: { posts: AllDocumentTypes[] }) {
   const locale = useLocale();
-  console.log(posts, "posts");
+
   return (
     <ul className={style.blogList}>
       {posts.map((post: any, index: number) => {

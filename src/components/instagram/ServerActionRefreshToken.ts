@@ -9,7 +9,7 @@ export default async function tokenUpdate(
     if (!oldToken || !clientSecret) {
         console.error("Missing required parameters");
     }
-    console.log("Access token renewed:");
+
     const url = `https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&client_secret=${clientSecret}&access_token=${oldToken}`
 
     try {
@@ -22,7 +22,7 @@ export default async function tokenUpdate(
         }
 
         const data = await response.json();
-        console.log(data, "data");
+
         return data.access_token;
     } catch (error) {
         console.error("Error renewing access token:", error);

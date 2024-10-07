@@ -11,7 +11,7 @@ function PasswordWrapper({
   password: string;
 }) {
   const [checkPassword, setCheckPassword] = useState("");
-  console.log(checkPassword, "checkPassword");
+
   return (
     <>
       {checkPassword === password ? (

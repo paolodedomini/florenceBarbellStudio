@@ -20,7 +20,6 @@ export default async function Page({ params }: { params: tParams }) {
       <ul className={style.listaBlog}>{children.map((child) => child)}</ul>
     ),
     oList: ({ children }) => {
-      console.log(children, "children");
       return (
         <ul className={style.listaBlog}>{children.map((child) => child)}</ul>
       );
