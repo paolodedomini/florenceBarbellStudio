@@ -67,7 +67,7 @@ export default async function Home({
       <div className={"wrapperFlex"}>
         <TitleAnimations
           testo="Florence Barbell GYM"
-          subtesto="120mt2"
+          subtesto="120m2"
           animation="word"
         />
 

@@ -103,6 +103,9 @@ button {
     line-height: 1;
     font-size: 6rem;
     word-break: break-word;
+    @media #{$phone} {
+      font-size: 3.5rem;
+    }
   }
   h3 {
     text-transform: uppercase;
