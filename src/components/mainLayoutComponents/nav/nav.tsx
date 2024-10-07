@@ -25,7 +25,7 @@ function NavBar() {
   useEffect(() => {
     setMobile(false);
   }, [pathN]);
-  console.log("pathN", t);
+
   return (
     <header
       className={`${style.header} ${isHome() ? style.header__home : null}`}
