@@ -1,7 +1,11 @@
 import data from "../../../../../public/data/interne/personalTraining.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: data.titolo,
+};
 function PersonalTraining() {
   return (
     <main className="interne">

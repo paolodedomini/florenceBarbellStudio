@@ -1,7 +1,11 @@
 import data from "../../../../../public/data/interne/valutazioneComposizioneCorporea.json";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: data.titolo,
+};
 function ValutazioneComposizioneCorporea() {
   return (
     <main className="interne">

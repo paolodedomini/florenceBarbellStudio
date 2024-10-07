@@ -1,5 +1,13 @@
 import TitleAnimations from "../../../components/animations/titleAnimations";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "cookies and privacy",
+  description: "Cookie and Privacy policy",
+};
+
 function Cookie() {
   return (
     <main>
