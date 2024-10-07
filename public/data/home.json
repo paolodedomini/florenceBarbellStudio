@@ -48,54 +48,16 @@
             "/image/NICCO-STUDIO_-4.jpg",
             "/image/NICCO-STUDIO_-2.jpg",
             "/image/NICCO-STUDIO_-3.jpg"
-        ]
-    },
-    "en": {
-        "titolo": "web site",
-        "tabs": [
-            {
-                "titolo": "tab1",
-                "testo": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                "image": "/image/mainimage.jpg",
-                "link": "index.html"
-            },
-            {
-                "titolo": "tab2",
-                "testo": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                "image": "/image/mainimage2.jpg",
-                "link": "contatti.html"
-            },
-            {
-                "titolo": "tab3",
-                "testo": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                "image": "/image/mainimage.jpg",
-                "link": "contatti.html"
-            }
         ],
-        "parallax": "Grande passione e profonda preparazione su fitness e riabilitazione, Il nostro approccio è personalizzato e orientato agli obbiettivi.",
-        "list": [
-            {
-                "titolo": "3 power anal Rack"
-            },
-            {
-                "titolo": "5 Penis enlargement station"
-            },
-            {
-                "titolo": "CONCEPT 2 machines of death"
-            },
-            {
-                "titolo": "panche d’ogni misura"
-            },
-            {
-                "titolo": "pesi che manco la madonna"
-            }
-        ],
-        "carousel": [
-            "/image/NICCO-STUDIO_-2.jpg",
-            "/image/NICCO-STUDIO_-3.jpg",
-            "/image/NICCO-STUDIO_-4.jpg",
-            "/image/NICCO-STUDIO_-2.jpg",
-            "/image/NICCO-STUDIO_-3.jpg"
+        "gallery": [
+            "/image/instagram/2023-09-12_13-52-09_UTC.jpg",
+            "/image/instagram/2023-09-20_19-39-51_UTC.jpg",
+            "/image/instagram/2023-10-05_10-19-03_UTC_1.jpg",
+            "/image/instagram/2024-09-28_16-11-39_UTC.jpg",
+            "/image/instagram/2024-05-14_16-24-01_UTC_1.jpg",
+            "/image/instagram/2024-05-14_16-24-01_UTC_2.jpg",
+            "/image/instagram/2024-07-17_17-00-23_UTC.jpg",
+            "/image/instagram/2024-09-11_20-08-40_UTC.jpg"
         ]
     }
 }

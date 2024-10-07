@@ -9,11 +9,13 @@ import TitleAnimations from "@/components/animations/titleAnimations";
 import Image from "next/image";
 import BigList from "@/components/list/bigList";
 import FormSection from "@/components/form/formSection";
+import Splash from "@/components/splash/splash";
+import GalleryGrid from "@/components/gallery/gallery";
 /* DATA */
 import heroData from "../../../public/data/hero.json";
 import homeData from "../../../public/data/home.json";
 import staffData from "../../../public/data/staff.json";
-import Splash from "@/components/splash/splash";
+
 /*IMAGES*/
 import HeroImage from "../../../public/image/hero.jpg";
 import dynamic from "next/dynamic";
@@ -102,14 +104,11 @@ export default async function Home({
       <AnimatedSection overflowHidden={false}>
         <Staff data={staffData[locale as keyof typeof homeData]} />
       </AnimatedSection>
-      {/*  <AnimatedSection>
-        <InstagramPost
-          token={
-            "IGQWROUU9MaW9PU1ZA2UVlVN3dTTGJ6cXpFckJtWGNNT2FlUGtubHhBQUZAZAT0Q4MS1JaFFqOGRDLUtuOEZAwOTBjaEhJbDJYeWVWa1luN3c0UlRMTjU5WjJfVlZA4eFZA0VlNCZA3ZAFckJvbU96SDRsenk3SDBZAUHRGbnMZD"
-          }
-          client={"aa5c815437121a7a8f6c2db93d8195f4"}
+      <AnimatedSection>
+        <GalleryGrid
+          images={homeData[locale as keyof typeof homeData].gallery}
         />
-      </AnimatedSection> */}
+      </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />
       </AnimatedSection>

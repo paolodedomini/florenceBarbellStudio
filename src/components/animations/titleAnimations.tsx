@@ -52,7 +52,7 @@ function TitleAnimations({
   if (isMainTitle) {
     return (
       <motion.h1
-        className={`${style.titleAnimationsWrapper} ${className}`}
+        className={`${style.titleAnimationsWrapper} ${style[className as keyof typeof style]}`}
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -85,7 +85,7 @@ function TitleAnimations({
   } else {
     return (
       <motion.div
-        className={`${style.titleAnimationsWrapper} ${className}`}
+        className={`${style.titleAnimationsWrapper} ${style[className as keyof typeof style]}`}
         variants={container}
         initial="hidden"
         whileInView="show"
