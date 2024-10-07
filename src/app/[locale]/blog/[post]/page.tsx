@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: tParams }) {
       <TitleAnimations
         testo={page.data.titolo as string}
         animation="word"
-        className={style.blogTitle}
+        className={"blogTitle"}
         once
       />
       <div className={style.blogMainImage}>
