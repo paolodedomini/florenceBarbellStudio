@@ -13,7 +13,7 @@ import Splash from "@/components/splash/splash";
 import GalleryGrid from "@/components/gallery/gallery";
 /* DATA */
 import heroData from "../../../public/data/hero.json";
-import homeData from "../../../public/data/home.json";
+
 import staffData from "../../../public/data/staff.json";
 
 /*IMAGES*/
@@ -38,7 +38,7 @@ export default async function Home({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-
+  const homeData = await import("../../../public/data/home.json");
   const HeroDataLang = heroData[locale as keyof typeof heroData];
 
   return (

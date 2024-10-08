@@ -11,7 +11,6 @@ import Footer from "@/components/mainLayoutComponents/footer/footer";
 import footerData from "../../../public/data/footer.json";
 import CookieConsentBanner from "@/components/cookieConsent/cookieConsent";
 import ScrollTop from "@/components/scroll/scrollToTop";
-import { title } from "process";
 
 const oswald = Oswald({
   subsets: ["latin"],
