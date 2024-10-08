@@ -11,9 +11,9 @@ import BigList from "@/components/list/bigList";
 import FormSection from "@/components/form/formSection";
 import Splash from "@/components/splash/splash";
 import GalleryGrid from "@/components/gallery/gallery";
+
 /* DATA */
 import heroData from "../../../public/data/hero.json";
-
 import staffData from "../../../public/data/staff.json";
 
 /*IMAGES*/
@@ -31,16 +31,27 @@ const InstagramPost = dynamic(() => import("@/components/instagram/instagram"));
  * Mantenere le pagine componenti server-side
  * Passare i dati ai componenti tramite props
  */
-
+type ThomeData = {
+  default: {
+    [key: string]: {
+      titolo: string;
+      tabs: { titolo: string; testo: string; image: string; link: string }[];
+      parallax: string;
+      list: { titolo: string }[];
+      carousel: string[];
+      gallery: string[];
+    };
+  };
+};
 export default async function Home({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const homeData = await import("../../../public/data/home.json");
+  const homeData: ThomeData = await import("../../../public/data/home.json");
   const HeroDataLang = heroData[locale as keyof typeof heroData];
-
+  console.log(locale, "locale");
   return (
     <main className={styles.main}>
       <Splash />
@@ -56,11 +67,11 @@ export default async function Home({
       </div>
 
       <AnimatedSection overflowHidden={true}>
-        <Tabs data={homeData[locale as keyof typeof homeData].tabs} />
+        <Tabs data={homeData.default[locale].tabs} />
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <Parallax
-          testo={homeData[locale as keyof typeof homeData].parallax}
+          testo={homeData.default[locale].parallax}
           imageURL="/image/parallaxhome.jpg"
           alt="test"
           height="400px"
@@ -82,11 +93,9 @@ export default async function Home({
       </div>
 
       <AnimatedSection overflowHidden={false}>
-        <BigList data={homeData[locale as keyof typeof homeData].list} />
+        <BigList data={homeData.default[locale].list} />
 
-        <CarouselImage
-          data={homeData[locale as keyof typeof homeData].carousel}
-        />
+        <CarouselImage data={homeData.default[locale].carousel} />
       </AnimatedSection>
       <div className={"wrapperFlex"}>
         <TitleAnimations
@@ -102,12 +111,10 @@ export default async function Home({
         />
       </div>
       <AnimatedSection overflowHidden={false}>
-        <Staff data={staffData[locale as keyof typeof homeData]} />
+        <Staff data={staffData[locale as keyof typeof staffData]} />
       </AnimatedSection>
       <AnimatedSection>
-        <GalleryGrid
-          images={homeData[locale as keyof typeof homeData].gallery}
-        />
+        <GalleryGrid images={homeData.default[locale].gallery} />
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />
