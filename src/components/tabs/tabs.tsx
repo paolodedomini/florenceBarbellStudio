@@ -116,7 +116,7 @@ function Tabs({ data }: { data: Tdata[] | undefined }) {
     setTabData(data && data[activeTab]);
   }, [activeTab]);
 
-  if (!data) return null;
+  if (data === undefined) return null;
   return (
     <div className={style.tabs} ref={wrapper}>
       <TabNav data={data} activeTab={activeTab} setActiveTab={setActiveTab} />

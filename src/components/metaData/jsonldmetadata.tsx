@@ -4,6 +4,9 @@ import React from "react";
 // Crea un componente che renderizza un tag script con il contenuto JSON-LD
 
 function JsonldMetaData({ metadata }: { metadata: any }) {
+  if (metadata === undefined) {
+    return null;
+  }
   return (
     <script
       type="application/ld+json"
