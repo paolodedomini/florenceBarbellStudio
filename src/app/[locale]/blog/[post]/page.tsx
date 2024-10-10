@@ -5,10 +5,12 @@ import AnimatedSection from "@/components/mainLayoutComponents/sections/animated
 import style from "./style.module.scss";
 import ImagePreload from "@/components/loaders/imagePreLoad";
 import SocialShare from "@/components/socialShare/socialShare";
+import Script from "next/script";
 
 type tParams = {
   post: string;
 };
+
 export default async function Page({ params }: { params: tParams }) {
   const client = createClient();
   const page = await client.getByUID("blogpage", params.post);
@@ -45,6 +47,12 @@ export default async function Page({ params }: { params: tParams }) {
       <AnimatedSection>
         <PrismicRichText field={page.data.content} components={components} />
       </AnimatedSection>
+      <Script
+        src="https://static.cdn.prismic.io/prismic.js?new=true&repo=florencebarbellstudio"
+        strategy="lazyOnload"
+        async
+        defer
+      />
     </main>
   );
 }
