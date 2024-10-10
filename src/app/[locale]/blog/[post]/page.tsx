@@ -47,12 +47,6 @@ export default async function Page({ params }: { params: tParams }) {
       <AnimatedSection>
         <PrismicRichText field={page.data.content} components={components} />
       </AnimatedSection>
-      <Script
-        src="https://static.cdn.prismic.io/prismic.js?new=true&repo=florencebarbellstudio"
-        strategy="lazyOnload"
-        async
-        defer
-      />
     </main>
   );
 }
