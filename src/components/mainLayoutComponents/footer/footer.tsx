@@ -59,10 +59,10 @@ function Footer({ data }: { data: Tdata }) {
               {footerData.piva}: {footerData.pivaNumber}
             </li>
             <li>
-              {footerData.address}:{footerData.addressValue}
+              {footerData.address}: {footerData.addressValue}
             </li>
             <li>
-              {footerData.phone}:{footerData.phoneValue}
+              {footerData.phone}: {footerData.phoneValue}
             </li>
             <li>
               {footerData.email}:{" "}
