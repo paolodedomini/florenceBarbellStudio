@@ -1,8 +1,9 @@
+import { promises as fs } from "fs";
 import { Oswald, Outfit } from "next/font/google";
 import "@/sass/all.scss";
 import SmoothScrolling from "@/components/scroll/smoothScrolling";
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
-import meta from "../../../public/data/metadata/meta-home.json";
+
 import Nav from "@/components/mainLayoutComponents/nav/nav";
 import { locales } from "../../configTranslations";
 import { unstable_setRequestLocale, getMessages } from "next-intl/server";
@@ -35,6 +36,13 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
+  //LETTURA FILE JSON DA FILE SYSTEM
+  const fileMeta = await fs.readFile(
+    process.cwd() + "/public/data/metadata/meta-home.json",
+    "utf8"
+  );
+  const meta = JSON.parse(fileMeta);
+
   const data = meta[locale as keyof typeof meta].metaHtml;
   if (data === undefined) {
     return {
@@ -54,6 +62,12 @@ export default async function RootLayout({
 }>) {
   unstable_setRequestLocale(params.locale);
   const messages = await getMessages();
+  //LETTURA FILE JSON DA FILE SYSTEM
+  const fileMeta = await fs.readFile(
+    process.cwd() + "/public/data/metadata/meta-home.json",
+    "utf8"
+  );
+  const meta = JSON.parse(fileMeta);
 
   return (
     <html lang="it">

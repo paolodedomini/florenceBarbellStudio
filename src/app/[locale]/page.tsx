@@ -1,3 +1,4 @@
+import { promises as fs } from "fs";
 import HeroVideo from "@/components/heros/Hero";
 import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -32,15 +33,13 @@ const InstagramPost = dynamic(() => import("@/components/instagram/instagram"));
  * Passare i dati ai componenti tramite props
  */
 type ThomeData = {
-  default: {
-    [key: string]: {
-      titolo: string;
-      tabs: { titolo: string; testo: string; image: string; link: string }[];
-      parallax: string;
-      list: { titolo: string }[];
-      carousel: string[];
-      gallery: string[];
-    };
+  [key: string]: {
+    titolo: string;
+    tabs: { titolo: string; testo: string; image: string; link: string }[];
+    parallax: string;
+    list: { titolo: string }[];
+    carousel: string[];
+    gallery: string[];
   };
 };
 export default async function Home({
@@ -49,9 +48,14 @@ export default async function Home({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const homeData: ThomeData = await import("../../../public/data/home.json");
+  const fileHome = await fs.readFile(
+    process.cwd() + "/public/data/home.json",
+    "utf8"
+  );
+
+  const homeData: ThomeData = JSON.parse(fileHome);
   const HeroDataLang = heroData[locale as keyof typeof heroData];
-  console.log(locale, "locale");
+
   return (
     <main className={styles.main}>
       <Splash />
@@ -67,11 +71,11 @@ export default async function Home({
       </div>
 
       <AnimatedSection overflowHidden={true}>
-        <Tabs data={homeData.default[locale].tabs} />
+        <Tabs data={homeData[locale].tabs} />
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <Parallax
-          testo={homeData.default[locale].parallax}
+          testo={homeData[locale].parallax}
           imageURL="/image/parallaxhome.jpg"
           alt="test"
           height="400px"
@@ -93,9 +97,9 @@ export default async function Home({
       </div>
 
       <AnimatedSection overflowHidden={false}>
-        <BigList data={homeData.default[locale].list} />
+        <BigList data={homeData[locale].list} />
 
-        <CarouselImage data={homeData.default[locale].carousel} />
+        <CarouselImage data={homeData[locale].carousel} />
       </AnimatedSection>
       <div className={"wrapperFlex"}>
         <TitleAnimations
@@ -114,7 +118,7 @@ export default async function Home({
         <Staff data={staffData[locale as keyof typeof staffData]} />
       </AnimatedSection>
       <AnimatedSection>
-        <GalleryGrid images={homeData.default[locale].gallery} />
+        <GalleryGrid images={homeData[locale].gallery} />
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />
