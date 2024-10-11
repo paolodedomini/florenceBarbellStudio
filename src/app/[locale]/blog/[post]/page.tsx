@@ -36,13 +36,15 @@ export default async function Page({ params }: { params: tParams }) {
         className={"blogTitle"}
         once
       />
-      <div className={style.blogMainImage}>
-        <ImagePreload
-          src={page.data.immagine_principale.url || ""}
-          alt={page.data.immagine_principale.alt || "main image"}
-          type="fill"
-        />
-      </div>
+      {page.data.immagine_principale.url && (
+        <div className={style.blogMainImage}>
+          <ImagePreload
+            src={page.data.immagine_principale.url || ""}
+            alt={page.data.immagine_principale.alt || "main image"}
+            type="fill"
+          />
+        </div>
+      )}
       <SocialShare url={params.post} title={page.data.titolo as string} />
       <AnimatedSection>
         <PrismicRichText field={page.data.content} components={components} />
