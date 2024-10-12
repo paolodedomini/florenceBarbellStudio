@@ -1,9 +1,10 @@
 import { createClient } from "@/prismicio";
+import { PrismicRichText, JSXMapSerializer } from "@prismicio/react";
 import TitleAnimations from "@/components/animations/titleAnimations";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
 import style from "./style.module.scss";
+import ImagePreload from "@/components/loaders/imagePreLoad";
 import PasswordWrapper from "@/components/passwordWrapper/passwordWrapper";
-
 type tParams = {
   uid: string;
 };

@@ -140,7 +140,7 @@ function HeroVideo({
 
       <motion.div className={style.hero__text} style={{ y }}>
         <motion.ul variants={container} initial="hidden" animate="show">
-          {data?.list.map((listItem: string, index: number) => (
+          {data.list.map((listItem: string, index: number) => (
             <motion.li key={index} variants={item}>
               <span>{listItem}</span>
             </motion.li>
