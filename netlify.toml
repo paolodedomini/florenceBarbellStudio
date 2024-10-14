@@ -1,4 +1,2 @@
-[functions.page]
-  included_files = ["public/data/**"]
-[functions.layout]
+[functions]
   included_files = ["public/data/**"]

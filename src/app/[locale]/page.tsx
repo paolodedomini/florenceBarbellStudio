@@ -1,4 +1,3 @@
-import { promises as fs } from "fs";
 import HeroVideo from "@/components/heros/Hero";
 import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -48,12 +47,8 @@ export default async function Home({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const fileHome = await fs.readFile(
-    process.cwd() + "/public/data/home.json",
-    "utf8"
-  );
+  const homeData = require("../../../public/data/home.json");
 
-  const homeData: ThomeData = JSON.parse(fileHome);
   const HeroDataLang = heroData[locale as keyof typeof heroData];
 
   return (
@@ -71,7 +66,7 @@ export default async function Home({
       </div>
 
       <AnimatedSection overflowHidden={true}>
-        <Tabs data={homeData[locale].tabs} />
+        {homeData[locale].tabs && <Tabs data={homeData[locale].tabs} />}
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <Parallax
