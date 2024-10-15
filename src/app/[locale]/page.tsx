@@ -66,8 +66,8 @@ export default async function Home({
       </div>
 
       <AnimatedSection overflowHidden={true}>
-        {homeData[locale].tabs !== undefined && (
-          <Tabs data={homeData[locale].tabs} />
+        {homeData["it"].tabs !== undefined && (
+          <Tabs data={homeData["it"].tabs} />
         )}
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>

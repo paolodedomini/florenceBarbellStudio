@@ -35,7 +35,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
-  const data = meta[locale as keyof typeof meta].metaHtml;
+  const data = meta["it"].metaHtml;
   if (!meta) {
     return {
       title: "Florence Barbell Studio",
