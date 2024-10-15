@@ -72,7 +72,7 @@ export default async function Home({
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <Parallax
-          testo={homeData[locale].parallax}
+          testo={homeData["it"].parallax}
           imageURL="/image/parallaxhome.jpg"
           alt="test"
           height="400px"
@@ -94,9 +94,9 @@ export default async function Home({
       </div>
 
       <AnimatedSection overflowHidden={false}>
-        <BigList data={homeData[locale].list} />
+        <BigList data={homeData["it"].list} />
 
-        <CarouselImage data={homeData[locale].carousel} />
+        <CarouselImage data={homeData["it"].carousel} />
       </AnimatedSection>
       <div className={"wrapperFlex"}>
         <TitleAnimations
@@ -112,10 +112,10 @@ export default async function Home({
         />
       </div>
       <AnimatedSection overflowHidden={false}>
-        <Staff data={staffData[locale as keyof typeof staffData]} />
+        <Staff data={staffData["it"]} />
       </AnimatedSection>
       <AnimatedSection>
-        <GalleryGrid images={homeData[locale].gallery} />
+        <GalleryGrid images={homeData["it"].gallery} />
       </AnimatedSection>
       <AnimatedSection overflowHidden={false}>
         <FormSection />
