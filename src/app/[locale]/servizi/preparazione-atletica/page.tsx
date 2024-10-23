@@ -5,6 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: data.titolo,
+  description: data.metaDescription,
 };
 function PreparazioneAtletica() {
   return (

@@ -3,6 +3,12 @@ import data from "../../../../../public/data/interne/valutazioneFunzionale.json"
 import TitleAnimations from "@/components/animations/titleAnimations";
 import Accordion from "@/components/accordion/accordion";
 
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: data.titolo,
+  description: data.metaDescription,
+};
+
 function ValutazioneFunzionale() {
   return (
     <main className="interne">

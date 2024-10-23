@@ -13,7 +13,6 @@ export const ImagePreload = ({
   isLazy,
   type,
 }: {
-  loaderImg?: (src: string) => string;
   src: StaticImageData | string;
   alt: string;
   width?: number;
@@ -31,8 +30,8 @@ export const ImagePreload = ({
         type === "hero"
           ? style.hero
           : type === "fill"
-          ? style.fill
-          : style.fixed
+            ? style.fill
+            : style.fixed
       }`}
       style={{
         width: "100%",

@@ -5,7 +5,6 @@ import AnimatedSection from "@/components/mainLayoutComponents/sections/animated
 import style from "./style.module.scss";
 import ImagePreload from "@/components/loaders/imagePreLoad";
 import SocialShare from "@/components/socialShare/socialShare";
-import Script from "next/script";
 
 type tParams = {
   post: string;
