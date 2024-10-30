@@ -19,7 +19,7 @@ function Map({ position, zoom }: { position: LatLngExpression; zoom: number }) {
       />
       <Marker position={position}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          FLORENCE BARBELL STUDIO <br /> Via Gugliemo Pepe 47, Firenze.
         </Popup>
       </Marker>
       <SetViewOnClick coords={position} />

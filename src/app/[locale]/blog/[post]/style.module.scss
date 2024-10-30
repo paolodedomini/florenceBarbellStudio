@@ -29,14 +29,20 @@
     line-height: 1.2;
     letter-spacing: 0px;
   }
-  .blogImage {
-    img {
-      object-fit: cover;
-    }
-  }
+
   p {
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 400;
+    img {
+      object-fit: cover;
+      width: 100%;
+      display: block;
+    }
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
   }
 }
