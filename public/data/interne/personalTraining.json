@@ -27,7 +27,7 @@
             "testo": "Una volta che il Personal Trainer e il cliente si sono accordati sull’obiettivo da raggiungere insieme, sarà cura dell’allenatore testare le capacità fisiche del soggetto, soprattutto in caso di infortuni/operazioni pregresse o di problemi di salute/posturali/motori in particolare. In questo modo, emergeranno eventuali limiti fisici del cliente, di cui il PT DOVRÀ tenere conto in fase di redazione del programma di allenamento."
         }
     ],
-    "testo3": "Remise en forme",
+    "testo3": "",
     "lista3": [
         {
             "titolo": "Dimagrimento",
@@ -46,7 +46,7 @@
     "lista4": [
         {
             "titolo": "Prezzo del corso",
-            "testo": "<u> lezione singola</u><br>40€<br><u>Pacchetto da 10 lezioni: </u><br>35€/lezione per un totale di 350€<br><u>Pacchetto da 15 o più lezioni:</u><br>30€/lezione<br><br><b>Prezzi degli small group:</b><br>2 persone: 30€/lezione<br>3 persone: 25€/lezione<br>4 persone: 20€/lezione<br>Per programmi (schede d’allenamento) personalizzati non esitate a contattarci."
+            "testo": "<div ><u> lezione singola</u><br>50€<br><u>Pacchetto da 10 lezioni: </u><br>45€/lezione per un totale di 450€<br><u>Pacchetto da 15 o più lezioni:</u><br>40€/lezione<br><br><b>Prezzi degli small group:</b><br/>Livello Base (4 Personal training + 1 Lezione di valutazione): 200€<br/>Livello Medio: 25€/h (Minimo pacchetti da 3 mesi)<br/>Livello Avanzato 20€/h (Minimo pacchetto da 3 mesi)</div>"
         },
         {
             "titolo": "sede del corso",
