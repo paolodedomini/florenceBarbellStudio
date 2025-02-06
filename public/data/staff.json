@@ -7,15 +7,17 @@
             "ruolo": "Chinesiologo",
             "eta": 22,
             "image": "/image/gradi.jpg",
-            "descrizione": "Sono un ragazzo di 72 anni, mi piace la musica e il cinema. Sono appassionato di tecnologia e mi piace viaggiare.",
+            "descrizione": "",
             "skills": [
+                "Laurea Magistrale in Management dello sport e delle attivita' motorie",
                 "Laurea in Scienze motorie bio-sanitarie",
                 "Chinesiologo iscritto albo UNC",
-                "Docente CONI- Formazione Olimpica",
+                "Docente CONI - Formazione Olimpica",
+                "Direttivo Tecnico Nazionale - Responsabile specialità Elements",
                 "Docente Federazione Italiana Pesistica Olimpica - FIPE",
+                "Consigliere Dirigente FIPE Toscana",
                 "Referente e delegato regione Toscana Sthenathlon - FIPE",
-                "Vice presidente e tecnico sportivo ASD Cross-Tri",
-                "Consigliere Dirigente FIPE Toscana"
+                "Vice presidente e tecnico sportivo ASD Cross-Tri"
             ],
             "cv": "/doc/Gradi_Niccolo_Curriculum.pdf"
         },
@@ -26,7 +28,7 @@
             "ruolo": "Chinesiologo",
             "eta": 22,
             "image": "/image/macchioni.jpg",
-            "descrizione": "Sono un ragazzo di 92 anni, mi piace la musica e il cinema. Sono appassionato di tecnologia e mi piace viaggiare.",
+            "descrizione": "",
             "skills": [
                 "Specializzando in Strength and Conditioning presso il Setanta College",
                 "Laurea Magistrale in Scienze e tecniche dello sport e delle attività motorie preventive e adattate",

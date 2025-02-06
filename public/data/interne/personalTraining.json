@@ -46,7 +46,7 @@
     "lista4": [
         {
             "titolo": "Prezzo del corso",
-            "testo": "<div ><u> lezione singola</u><br>50€<br><u>Pacchetto da 10 lezioni: </u><br>45€/lezione <br><u>Pacchetto da 15 o più lezioni:</u><br>40€/lezione<br><br><b>Prezzi degli small group:</b><br/>Pacchetto Start (4 Personal training + 1 Lezione di valutazione): 200€<br/>Pacchetto Principiante: 25€/h <br/>Livello Avanzato 20€/h <br/>In coppia: 30€ a testa</div>"
+            "testo": "<div><u> lezione singola</u><br>50€<br><u>Pacchetto da 10 lezioni: </u><br>45€/lezione <br><u>Pacchetto da 15 o più lezioni:</u><br>40€/lezione<br><br><b>Prezzi degli small group:</b><br/>Pacchetto Start (4 Personal training + 1 Lezione di valutazione): 200€<br/>Pacchetto Principiante: 25€/h <br/>Livello Avanzato 20€/h <br/>In coppia: 30€ a testa</div>"
         },
         {
             "titolo": "sede del corso",
