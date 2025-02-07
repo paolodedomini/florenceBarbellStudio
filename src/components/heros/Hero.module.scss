@@ -6,7 +6,10 @@
   z-index: -1;
 
   @media #{$landscape} {
-    margin-top: -120px;
+    margin-top: -150px;
+  }
+  @media #{$phone} {
+    margin-top: -129px;
   }
   &__mainImage {
     object-fit: cover;
