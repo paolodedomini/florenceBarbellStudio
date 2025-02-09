@@ -116,3 +116,7 @@ button {
   height: 100%;
   filter: grayscale(0.7);
 }
+.swiper-button-prev,
+.swiper-button-next {
+  color: $grey !important;
+}
