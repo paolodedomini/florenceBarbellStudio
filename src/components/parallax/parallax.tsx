@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 import style from "./parallax.module.scss";
 

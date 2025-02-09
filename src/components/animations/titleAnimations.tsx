@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import { delay, easeInOut, motion } from "framer-motion";
+import { motion } from "motion/react";
 import style from "./animations.module.scss";
-import { easeIn } from "framer-motion/dom";
 
 function TitleAnimations({
   testo,
@@ -45,7 +44,6 @@ function TitleAnimations({
       y: 0,
       transition: {
         duration: 0.5,
-        easeIn,
       },
     },
   };

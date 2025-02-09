@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import style from "./modals.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 function SimpleModal({
   image,
@@ -17,7 +17,7 @@ function SimpleModal({
   console.log("SimpleModal", modalState);
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence mode="sync" initial={false}>
         {modalState && (
           <motion.div
             className={style.simpleModal}

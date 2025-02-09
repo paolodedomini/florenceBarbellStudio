@@ -3,7 +3,7 @@ import { useRef } from "react";
 import style from "./form.module.scss";
 import Form from "./netlifyForm";
 import Image from "next/image";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform } from "motion/react";
 import { useMediaQuery } from "react-responsive";
 
 function FormSection() {

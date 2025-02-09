@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import style from "./modals.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 type Tdata = {
   status: string;
   image: string;

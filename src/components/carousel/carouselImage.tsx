@@ -13,7 +13,7 @@ import style from "./carousel.module.scss";
 import ImagePreload from "../loaders/imagePreLoad";
 import { useState } from "react";
 import SimpleModal from "../modals/simpleModal";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 
 function CarouselImage({ data }: { data: string[] }) {
   const [modalImage, setmodalImage] = useState<null | string>(null);
@@ -60,14 +60,12 @@ function CarouselImage({ data }: { data: string[] }) {
         </>
       </div>
 
-      {modalState && (
-        <SimpleModal
-          image={modalImage}
-          title={"immagine palestra"}
-          modalState={modalState}
-          setmodalstate={setmodalstate}
-        />
-      )}
+      <SimpleModal
+        image={modalImage}
+        title={"immagine palestra"}
+        modalState={modalState}
+        setmodalstate={setmodalstate}
+      />
     </>
   );
 }

@@ -2,12 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import style from "./tabs.module.scss";
 import Image from "next/image";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import ImagePreload from "../loaders/imagePreLoad";
 
 type Tdata = {

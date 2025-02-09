@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import style from "./Hero.module.scss";
-import { easeOut, motion, useTransform, useScroll } from "framer-motion";
+import { easeOut, motion, useTransform, useScroll } from "motion/react";
 import { useState } from "react";
 import LoaderSite from "@/components/loaders/loader";
 import { usePathname } from "next/navigation";
