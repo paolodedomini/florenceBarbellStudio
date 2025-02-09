@@ -17,50 +17,54 @@ function SimpleModal({
   console.log("SimpleModal", modalState);
   return (
     <>
-      <motion.div
-        className={style.simpleModal}
-        initial={{
-          opacity: 0,
-          x: "-100vw",
-        }}
-        animate={{
-          opacity: 1,
-          x: "0vw",
-        }}
-        exit={{
-          opacity: 0,
-          x: "-100vw",
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-        onClick={() => setmodalstate(false)}
-      >
-        <motion.div
-          className={style.simpleModal__image}
-          initial={{
-            opacity: 0,
-            x: "-100vw",
-          }}
-          animate={{
-            opacity: 1,
-            x: "0vw",
-          }}
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-            delay: 0.7,
-          }}
-        >
-          <Image
-            src={image || ""}
-            alt={title || ""}
-            layout={"fill"}
-            loading="lazy"
-          />
-        </motion.div>
-      </motion.div>
+      <AnimatePresence>
+        {modalState && (
+          <motion.div
+            className={style.simpleModal}
+            initial={{
+              opacity: 0,
+              x: "-100vw",
+            }}
+            animate={{
+              opacity: 1,
+              x: "0vw",
+            }}
+            exit={{
+              opacity: 0,
+              x: "-100vw",
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            onClick={() => setmodalstate(false)}
+          >
+            <motion.div
+              className={style.simpleModal__image}
+              initial={{
+                opacity: 0,
+                x: "-100vw",
+              }}
+              animate={{
+                opacity: 1,
+                x: "0vw",
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+                delay: 0.7,
+              }}
+            >
+              <Image
+                src={image || ""}
+                alt={title || ""}
+                layout={"fill"}
+                loading="lazy"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
