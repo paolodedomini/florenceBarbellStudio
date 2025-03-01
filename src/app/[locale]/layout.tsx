@@ -11,7 +11,7 @@ import Footer from "@/components/mainLayoutComponents/footer/footer";
 import footerData from "../../../public/data/footer.json";
 import CookieConsentBanner from "@/components/cookieConsent/cookieConsent";
 import ScrollTop from "@/components/scroll/scrollToTop";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import GoogleAnalytics from "@/components/cookieConsent/googleAnalytics";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -55,7 +55,7 @@ export default async function RootLayout({
 }>) {
   unstable_setRequestLocale(params.locale);
   const messages = await getMessages();
-
+  console.log(process.env.GA_MEASUREMENT_ID, "test");
   return (
     <html lang="it">
       <head>
@@ -72,7 +72,9 @@ export default async function RootLayout({
           <ScrollTop />
         </NextIntlClientProvider>
       </body>
-      <GoogleAnalytics gaId="GTM-PK68WBVQ" />
+      {process.env.GA_MEASUREMENT_ID && (
+        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID} />
+      )}
     </html>
   );
 }
