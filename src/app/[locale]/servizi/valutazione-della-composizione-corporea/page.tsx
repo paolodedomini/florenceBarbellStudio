@@ -4,7 +4,7 @@ import Accordion from "@/components/accordion/accordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Firenze" + " " + data.titolo,
+  title: data.titolo + " " + "Firenze",
   description: data.metaDescription,
 };
 function ValutazioneComposizioneCorporea() {
