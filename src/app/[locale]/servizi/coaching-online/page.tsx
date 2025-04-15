@@ -3,7 +3,7 @@ import TitleAnimations from "@/components/animations/titleAnimations";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Firenze" + data.titolo,
+  title: "Firenze" + " " + data.titolo,
   description: data.metaDescription,
 };
 function CoachingOnline() {
