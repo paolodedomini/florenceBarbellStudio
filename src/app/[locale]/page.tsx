@@ -31,16 +31,7 @@ const InstagramPost = dynamic(() => import("@/components/instagram/instagram"));
  * Mantenere le pagine componenti server-side
  * Passare i dati ai componenti tramite props
  */
-type ThomeData = {
-  [key: string]: {
-    titolo: string;
-    tabs: { titolo: string; testo: string; image: string; link: string }[];
-    parallax: string;
-    list: { titolo: string }[];
-    carousel: string[];
-    gallery: string[];
-  };
-};
+
 export default async function Home({
   params: { locale },
 }: {
