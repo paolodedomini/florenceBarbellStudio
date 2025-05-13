@@ -28,6 +28,8 @@ function Form() {
   const [errorNome, setErrorNome] = useState<string>("");
   const [cognome, setCognome] = useState<string>("");
   const [errorCognome, setErrorCognome] = useState<string>("");
+  const [cell, setCell] = useState<string>("");
+  const [errorCell, setErrorCell] = useState<string>("");
   const [mail, setMail] = useState<string>("");
   const [errorMail, setErrorMail] = useState<string>("");
   const [messaggio, setMessaggio] = useState<string>("");
@@ -47,7 +49,11 @@ function Form() {
     } else {
       setErrorCognome("");
     }
-
+    if (cell.length < 10 && !Number(cell)) {
+      setErrorCell(t("err_cell"));
+    } else {
+      setErrorCell("");
+    }
     if (mail.length < 6 && mail.length > 0) {
       setErrorMail(t("err_email"));
     } else if (mail.length > 0 && !mail.includes("@")) {
@@ -68,13 +74,15 @@ function Form() {
       cognome.length < 3 ||
       mail.length < 3 ||
       !mail.includes("@") ||
-      messaggio.length < 10
+      messaggio.length < 10 ||
+      cell.length < 10 ||
+      !Number(cell)
     ) {
       setSubmit(false);
     } else {
       setSubmit(true);
     }
-  }, [nome, mail, messaggio, cognome]);
+  }, [nome, mail, messaggio, cognome, cell]);
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
@@ -91,6 +99,7 @@ function Form() {
       if (res.status === 200) {
         setNome("");
         setCognome("");
+        setCell("");
         setMail("");
         setMessaggio("");
         setStatus("ok");
@@ -135,7 +144,20 @@ function Form() {
           type="text"
           name="cognome"
           value={cognome}
-          id=""
+          id="cognome"
+          required
+        />
+      </p>
+      <p>
+        <label htmlFor="cell">{t("cell")}</label> <br />
+        <input
+          onChange={(e) => {
+            setCell(e.target.value);
+          }}
+          type="text"
+          name="cell"
+          value={cell}
+          id="cell"
           required
         />
       </p>

@@ -48,6 +48,8 @@
         "nome": "Nome",
         "err_nome": "Inserire almeno 3 caratteri",
         "cognome": "Cognome",
+        "cell": "Cell",
+        "err_cell": "inserire un numero valito",
         "err_cognome": "Inserire almeno 3 caratteri",
         "email": "Email",
         "err_email": "Inserire un indirizzo email valido",
