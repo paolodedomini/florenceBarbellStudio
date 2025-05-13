@@ -158,7 +158,6 @@ function Form() {
           name="cell"
           value={cell}
           id="cell"
-          required
         />
       </p>
       <p>
