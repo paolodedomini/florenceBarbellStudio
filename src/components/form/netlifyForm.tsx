@@ -86,6 +86,7 @@ function Form() {
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
+    console.log(event.target);
     try {
       setStatus("pending");
       setError(null);
@@ -189,6 +190,7 @@ function Form() {
         {errorCognome && <p className={style.error}>{errorCognome}</p>}
         {errorMail && <p className={style.error}>{errorMail}</p>}
         {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
+        {errorCell && <p className={style.error}>{errorCell}</p>}
       </div>
       <p>
         <button disabled={submit ? false : true} type="submit">
