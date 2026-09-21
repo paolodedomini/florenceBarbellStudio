@@ -8,7 +8,7 @@ import { locales } from "../../configTranslations";
 import { unstable_setRequestLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import Footer from "@/components/mainLayoutComponents/footer/footer";
-import footerData from "../../../public/data/footer.json";
+import genericData from "../../../public/data/footer.json";
 import CookieConsentBanner from "@/components/cookieConsent/cookieConsent";
 import ScrollTop from "@/components/scroll/scrollToTop";
 import GoogleAnalytics from "@/components/cookieConsent/googleAnalytics";
@@ -66,9 +66,9 @@ export default async function RootLayout({
       <body className={`${oswald.variable} ${outfit.variable}`}>
         <CookieConsentBanner />
         <NextIntlClientProvider messages={messages} locale={params.locale}>
-          <Nav />
+          <Nav data={genericData} />
           <SmoothScrolling>{children}</SmoothScrolling>
-          <Footer data={footerData} />
+          <Footer data={genericData} />
           <ScrollTop />
         </NextIntlClientProvider>
       </body>

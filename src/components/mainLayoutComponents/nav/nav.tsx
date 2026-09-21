@@ -8,12 +8,36 @@ import { AnimatePresence, motion } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import navigation from "../../../../public/data/navigation.json";
-
-function NavBar() {
+type Tdata = {
+  it: {
+    piva: string;
+    pivaNumber: string;
+    address: string;
+    addressValue: string;
+    email: string;
+    emailValue: string;
+    seguici: string;
+    phone: string;
+    phoneValue: string;
+  };
+  en: {
+    piva: string;
+    pivaNumber: string;
+    address: string;
+    addressValue: string;
+    email: string;
+    emailValue: string;
+    seguici: string;
+    phone: string;
+    phoneValue: string;
+  };
+};
+function NavBar({ data }: { data: Tdata }) {
   const pathN = usePathname();
   const locale = useLocale();
   const [mobile, setMobile] = useState(false); //chiude mobile menu al cambio di pagina
   const t = navigation[locale as keyof typeof navigation];
+  const navData = data[locale as keyof typeof data];
 
   function isHome() {
     if (pathN === "/" + locale) {
@@ -57,10 +81,8 @@ function NavBar() {
         >
           <div className={style.mainNavBar__navBlock__topData}>
             Via Gugliemo Pepe 47, Firenze -{" "}
-            <a href="tel:+393386988655">3386988655</a> -{" "}
-            <a href="mailto:florencebarbellstudio@gmail.com">
-              florencebarbellstudio@gmail.com
-            </a>
+            <a href={`tel:+39${navData.phoneValue}`}>{navData.phoneValue}</a> -{" "}
+            <a href={`mailto:${navData.emailValue}`}>{navData.emailValue}</a>
           </div>
           <hr />
           <ul className={style.mainNavBar__navBlock__nav}>
@@ -71,7 +93,7 @@ function NavBar() {
                   url?: string;
                   sub?: { name: string; url: string }[];
                 },
-                index
+                index,
               ) => (
                 <li
                   className={`${
@@ -90,7 +112,7 @@ function NavBar() {
                     </ul>
                   )}
                 </li>
-              )
+              ),
             )}
           </ul>
         </div>
@@ -135,7 +157,7 @@ function NavBar() {
                       url?: string;
                       sub?: { name: string; url: string }[];
                     },
-                    index
+                    index,
                   ) => (
                     <li
                       className={`${
@@ -156,7 +178,7 @@ function NavBar() {
                         </ul>
                       )}
                     </li>
-                  )
+                  ),
                 )}
               </ul>
               <hr style={{ width: "50%" }} />
