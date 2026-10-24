@@ -1,0 +1,32 @@
+{
+  "id": "table_block",
+  "type": "SharedSlice",
+  "name": "TableBlock",
+  "description": "Tabella",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "table": {
+          "type": "Table",
+          "config": {
+            "label": "Tabella"
+          }
+        },
+        "caption": {
+          "type": "Text",
+          "config": {
+            "label": "Didascalia",
+            "placeholder": "Testo opzionale sotto la tabella"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

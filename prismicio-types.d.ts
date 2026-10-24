@@ -4,7 +4,10 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type BlogpageDocumentDataSlicesSlice = never;
+type BlogpageDocumentDataSlicesSlice =
+  | CalloutBlockSlice
+  | TextBlockSlice
+  | TableBlockSlice;
 
 /**
  * Content for blogPage documents
@@ -304,6 +307,161 @@ export type BlogContentSlice = prismic.SharedSlice<
   BlogContentSliceVariation
 >;
 
+/**
+ * Primary content in *CalloutBlock → Default → Primary*
+ */
+export interface CalloutBlockSliceDefaultPrimary {
+  /**
+   * Etichetta field in *CalloutBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Es. Prospettiva Storica
+   * - **API ID Path**: callout_block.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Contenuto field in *CalloutBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callout_block.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for CalloutBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CalloutBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CalloutBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CalloutBlock*
+ */
+type CalloutBlockSliceVariation = CalloutBlockSliceDefault;
+
+/**
+ * CalloutBlock Shared Slice
+ *
+ * - **API ID**: `callout_block`
+ * - **Description**: Box di approfondimento
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CalloutBlockSlice = prismic.SharedSlice<
+  "callout_block",
+  CalloutBlockSliceVariation
+>;
+
+/**
+ * Primary content in *TableBlock → Default → Primary*
+ */
+export interface TableBlockSliceDefaultPrimary {
+  /**
+   * Tabella field in *TableBlock → Default → Primary*
+   *
+   * - **Field Type**: Table
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table_block.default.primary.table
+   * - **Documentation**: https://prismic.io/docs/fields/table
+   */
+  table: prismic.TableField;
+
+  /**
+   * Didascalia field in *TableBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Testo opzionale sotto la tabella
+   * - **API ID Path**: table_block.default.primary.caption
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  caption: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for TableBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TableBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TableBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TableBlock*
+ */
+type TableBlockSliceVariation = TableBlockSliceDefault;
+
+/**
+ * TableBlock Shared Slice
+ *
+ * - **API ID**: `table_block`
+ * - **Description**: Tabella
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TableBlockSlice = prismic.SharedSlice<
+  "table_block",
+  TableBlockSliceVariation
+>;
+
+/**
+ * Primary content in *TextBlock → Default → Primary*
+ */
+export interface TextBlockSliceDefaultPrimary {
+  /**
+   * Contenuto field in *TextBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for TextBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TextBlock*
+ */
+type TextBlockSliceVariation = TextBlockSliceDefault;
+
+/**
+ * TextBlock Shared Slice
+ *
+ * - **API ID**: `text_block`
+ * - **Description**: Blocco di testo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextBlockSlice = prismic.SharedSlice<
+  "text_block",
+  TextBlockSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -326,6 +484,18 @@ declare module "@prismicio/client" {
       BlogContentSliceDefaultPrimary,
       BlogContentSliceVariation,
       BlogContentSliceDefault,
+      CalloutBlockSlice,
+      CalloutBlockSliceDefaultPrimary,
+      CalloutBlockSliceVariation,
+      CalloutBlockSliceDefault,
+      TableBlockSlice,
+      TableBlockSliceDefaultPrimary,
+      TableBlockSliceVariation,
+      TableBlockSliceDefault,
+      TextBlockSlice,
+      TextBlockSliceDefaultPrimary,
+      TextBlockSliceVariation,
+      TextBlockSliceDefault,
     };
   }
 }

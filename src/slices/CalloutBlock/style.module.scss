@@ -1,0 +1,18 @@
+.callout {
+  margin: 2rem 0;
+  padding: 0.75rem 1.25rem;
+  background-color: #eef2f7;
+  border-left: 6px solid #1f3864;
+  p {
+    font-style: italic;
+    margin: 0;
+    & + p {
+      margin-top: 0.75rem;
+    }
+  }
+  .label {
+    font-style: normal;
+    font-weight: 600;
+    color: #1f3864;
+  }
+}

@@ -40,7 +40,17 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "text_block": {
+              "type": "SharedSlice"
+            },
+            "table_block": {
+              "type": "SharedSlice"
+            },
+            "callout_block": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },

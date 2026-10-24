@@ -4,4 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   blog_content: dynamic(() => import("./BlogContent")),
+  callout_block: dynamic(() => import("./CalloutBlock")),
+  table_block: dynamic(() => import("./TableBlock")),
+  text_block: dynamic(() => import("./TextBlock")),
 };

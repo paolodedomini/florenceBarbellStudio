@@ -1,0 +1,35 @@
+{
+  "id": "callout_block",
+  "type": "SharedSlice",
+  "name": "CalloutBlock",
+  "description": "Box di approfondimento",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Etichetta",
+            "placeholder": "Es. Prospettiva Storica"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Contenuto",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
