@@ -19,6 +19,13 @@
   }
   .listaBlog {
     font-weight: 100;
+    // ripristina i marcatori tolti dal reset globale degli ul
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    &.numerata {
+      list-style-type: decimal;
+    }
     li {
       margin: 0.5rem 0;
       font-weight: 400;

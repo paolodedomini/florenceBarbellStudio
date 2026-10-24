@@ -10,7 +10,9 @@ export const richTextComponents: JSXMapSerializer = {
   ),
   oList: ({ children }) => {
     return (
-      <ul className={style.listaBlog}>{children.map((child) => child)}</ul>
+      <ol className={`${style.listaBlog} ${style.numerata}`}>
+        {children.map((child) => child)}
+      </ol>
     );
   },
   label: ({ node, children }) => (
