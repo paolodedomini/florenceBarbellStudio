@@ -12,6 +12,8 @@ import genericData from "../../../public/data/footer.json";
 import CookieConsentBanner from "@/components/cookieConsent/cookieConsent";
 import ScrollTop from "@/components/scroll/scrollToTop";
 import GoogleAnalytics from "@/components/cookieConsent/googleAnalytics";
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -71,6 +73,8 @@ export default async function RootLayout({
           <Footer data={genericData} />
           <ScrollTop />
         </NextIntlClientProvider>
+        {/* abilita le anteprime delle bozze dall'editor di prismic.io */}
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
       {process.env.GA_MEASUREMENT_ID && (
         <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID} />
