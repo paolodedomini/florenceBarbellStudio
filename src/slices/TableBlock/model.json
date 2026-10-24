@@ -18,6 +18,15 @@
             "label": "Tabella"
           }
         },
+        "no_header": {
+          "type": "Boolean",
+          "config": {
+            "label": "Senza intestazione",
+            "default_value": false,
+            "placeholder_true": "Sì",
+            "placeholder_false": "No"
+          }
+        },
         "caption": {
           "type": "Text",
           "config": {

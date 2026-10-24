@@ -377,6 +377,17 @@ export interface TableBlockSliceDefaultPrimary {
   table: prismic.TableField;
 
   /**
+   * Senza intestazione field in *TableBlock → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: table_block.default.primary.no_header
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  no_header: prismic.BooleanField;
+
+  /**
    * Didascalia field in *TableBlock → Default → Primary*
    *
    * - **Field Type**: Text
