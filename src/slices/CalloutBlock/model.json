@@ -25,7 +25,15 @@
             "label": "Contenuto",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink"
+            "multi": "paragraph,strong,em,hyperlink",
+            "labels": [
+              "centrato",
+              "allineato-destra",
+              "giustificato",
+              "sottolineato",
+              "evidenziato",
+              "testo-piccolo"
+            ]
           }
         }
       },

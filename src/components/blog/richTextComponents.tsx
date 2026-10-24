@@ -1,5 +1,6 @@
 import { JSXMapSerializer } from "@prismicio/react";
 import style from "@/app/[locale]/blog/[post]/style.module.scss";
+import labels from "./labels.module.scss";
 
 //oggetto per la configurazione del rich text di prismic.io
 export const richTextComponents: JSXMapSerializer = {
@@ -12,4 +13,7 @@ export const richTextComponents: JSXMapSerializer = {
       <ul className={style.listaBlog}>{children.map((child) => child)}</ul>
     );
   },
+  label: ({ node, children }) => (
+    <span className={labels[node.data.label]}>{children}</span>
+  ),
 };

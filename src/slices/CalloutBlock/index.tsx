@@ -1,5 +1,6 @@
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { richTextComponents } from "@/components/blog/richTextComponents";
 import style from "./style.module.scss";
 
 /**
@@ -22,6 +23,7 @@ const CalloutBlock = ({ slice }: CalloutBlockProps): JSX.Element => {
       <PrismicRichText
         field={content}
         components={{
+          label: richTextComponents.label,
           // l'etichetta va in linea all'inizio del primo paragrafo
           paragraph: ({ children, node }) => (
             <p>
