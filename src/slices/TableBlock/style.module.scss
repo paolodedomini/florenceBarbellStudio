@@ -6,6 +6,9 @@
   }
   table {
     width: 100%;
+    // colonne di larghezza uguale; sotto i 600px la tabella scorre in orizzontale
+    min-width: 600px;
+    table-layout: fixed;
     border-collapse: collapse;
     font-size: 1rem;
     line-height: 1.6;
