@@ -1,3 +1,2 @@
 [functions]
-  directory = "src"
   included_files = ["public/data/**"]
