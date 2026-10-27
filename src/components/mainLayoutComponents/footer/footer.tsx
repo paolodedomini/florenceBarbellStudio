@@ -55,6 +55,7 @@ function Footer({ data }: { data: Tdata }) {
             alt="logo"
           />
           <ul>
+            <li>A.S.D. Cross-Tri</li>
             <li>
               {footerData.piva}: {footerData.pivaNumber}
             </li>
