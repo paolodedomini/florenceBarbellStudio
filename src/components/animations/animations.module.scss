@@ -19,12 +19,16 @@
   &.blogTitle {
     font-size: 5rem;
     line-height: 1;
+    margin: 0;
   }
   span {
     display: inline-block;
     transform-origin: left;
     &.word {
       margin-right: 1rem;
+    }
+    &.space {
+      font-size: 0;
     }
   }
   .sub {

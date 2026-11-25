@@ -61,23 +61,30 @@ function TitleAnimations({
             return <span key={index}>&nbsp;</span>;
           }
           return (
-            <motion.span
-              className={`${animation === "word" && style.word}`}
-              variants={letter}
-              key={index}
-            >
-              {item}
-            </motion.span>
+            <React.Fragment key={index}>
+              {/* spazio reale tra le parole (invisibile) per il testo letto dai motori di ricerca */}
+              {animation === "word" && index > 0 && (
+                <span className={style.space}> </span>
+              )}
+              <motion.span
+                className={`${animation === "word" && style.word}`}
+                variants={letter}
+              >
+                {item}
+              </motion.span>
+            </React.Fragment>
           );
         })}
-        <motion.div
-          className={style.sub}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-        >
-          {subtesto}
-        </motion.div>
+        {subtesto && (
+          <motion.div
+            className={style.sub}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+          >
+            {subtesto}
+          </motion.div>
+        )}
       </motion.h1>
     );
   } else {
@@ -94,23 +101,30 @@ function TitleAnimations({
             return <span key={index}>&nbsp;</span>;
           }
           return (
-            <motion.span
-              className={`${animation === "word" && style.word}`}
-              variants={letter}
-              key={index}
-            >
-              {item}
-            </motion.span>
+            <React.Fragment key={index}>
+              {/* spazio reale tra le parole (invisibile) per il testo letto dai motori di ricerca */}
+              {animation === "word" && index > 0 && (
+                <span className={style.space}> </span>
+              )}
+              <motion.span
+                className={`${animation === "word" && style.word}`}
+                variants={letter}
+              >
+                {item}
+              </motion.span>
+            </React.Fragment>
           );
         })}
-        <motion.div
-          className={style.sub}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-        >
-          {subtesto}
-        </motion.div>
+        {subtesto && (
+          <motion.div
+            className={style.sub}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+          >
+            {subtesto}
+          </motion.div>
+        )}
       </motion.div>
     );
   }
