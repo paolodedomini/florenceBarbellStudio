@@ -17,6 +17,18 @@
     color: white;
     text-decoration: none;
   }
+  .cookieLinks {
+    margin-top: 1rem;
+    font-size: 0.85em;
+    button {
+      background: none;
+      color: white;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      text-decoration: underline;
+    }
+  }
   @media #{$landscape} {
     grid-template-columns: repeat(2, 1fr);
   }

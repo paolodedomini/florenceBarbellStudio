@@ -11,10 +11,25 @@
   h2 {
     text-transform: uppercase;
   }
+  p {
+    line-height: 1.5;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  // "Rifiuta" e "Accetta" con lo stesso peso, come richiesto dal Garante
   button {
+    flex: 1;
     background-color: $navyBlue;
     color: white;
-    margin-right: 1rem;
+    margin: 0;
+    border: 1px solid white;
   }
 }
 

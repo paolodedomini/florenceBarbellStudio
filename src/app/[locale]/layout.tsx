@@ -57,7 +57,6 @@ export default async function RootLayout({
 }>) {
   unstable_setRequestLocale(params.locale);
   const messages = await getMessages();
-  console.log(process.env.GA_MEASUREMENT_ID, "test");
   return (
     <html lang="it">
       <head>
@@ -75,10 +74,10 @@ export default async function RootLayout({
         </NextIntlClientProvider>
         {/* abilita le anteprime delle bozze dall'editor di prismic.io */}
         <PrismicPreview repositoryName={repositoryName} />
+        {process.env.GA_MEASUREMENT_ID && (
+          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID} />
+        )}
       </body>
-      {process.env.GA_MEASUREMENT_ID && (
-        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID} />
-      )}
     </html>
   );
 }

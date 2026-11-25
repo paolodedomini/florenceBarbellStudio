@@ -1,27 +1,30 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import cookie from "js-cookie";
+import Link from "next/link";
 import style from "./cookieConsent.module.scss";
+import { OPEN_BANNER_EVENT, getConsent, setConsent } from "./consent";
 
 const CookieConsentBanner = () => {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    const consentCookie = cookie.get("cookieConsent");
-
-    if (consentCookie === "rejected") {
+    // il banner compare finche' il visitatore non ha fatto una scelta
+    if (!getConsent()) {
       setShowBanner(true);
     }
+    const open = () => setShowBanner(true);
+    window.addEventListener(OPEN_BANNER_EVENT, open);
+    return () => window.removeEventListener(OPEN_BANNER_EVENT, open);
   }, []);
 
   const handleAccept = () => {
     setShowBanner(false);
-    cookie.set("cookieConsent", "accepted", { expires: 365 });
+    setConsent("accepted");
   };
 
   const handleReject = () => {
     setShowBanner(false);
-    cookie.set("cookieConsent", "rejected", { expires: 365 });
+    setConsent("rejected");
   };
 
   if (!showBanner) {
@@ -29,13 +32,23 @@ const CookieConsentBanner = () => {
   }
 
   return (
-    <div className={style.wrapperCookie}>
-      <h2>
-        Questo sito utilizza cookies per migliorare l&apos;esperienza utente
-      </h2>
-      <p>Clicca su accetta per continuare</p>
-      <button onClick={handleAccept}>Accetta</button>
-      <button onClick={handleReject}>Rifiuta</button>
+    <div
+      className={style.wrapperCookie}
+      role="dialog"
+      aria-label="Consenso ai cookie"
+    >
+      <h2>Questo sito utilizza cookie</h2>
+      <p>
+        Usiamo cookie tecnici, necessari al funzionamento del sito, e, solo con
+        il tuo consenso, cookie analitici di Google Analytics per capire come
+        viene usato il sito. Puoi cambiare la tua scelta in qualsiasi momento
+        dal link &quot;Preferenze cookie&quot; in fondo alla pagina.{" "}
+        <Link href="/it/cookies-and-privacy">Leggi la cookie policy</Link>
+      </p>
+      <div className={style.buttons}>
+        <button onClick={handleReject}>Rifiuta</button>
+        <button onClick={handleAccept}>Accetta</button>
+      </div>
     </div>
   );
 };

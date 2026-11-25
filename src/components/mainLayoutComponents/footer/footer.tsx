@@ -4,6 +4,8 @@ import style from "./footer.module.scss";
 import { useLocale } from "next-intl";
 import { useParams } from "next/navigation";
 import LeafletMain from "@/components/map/Leaflet";
+import Link from "next/link";
+import { openCookieBanner } from "@/components/cookieConsent/consent";
 type Tdata = {
   it: {
     piva: string;
@@ -70,6 +72,13 @@ function Footer({ data }: { data: Tdata }) {
               <a href={"mailto:" + footerData.emailValue}>
                 {footerData.emailValue}
               </a>
+            </li>
+            <li className={style.cookieLinks}>
+              <Link href="/it/cookies-and-privacy">Cookie policy</Link>
+              {" - "}
+              <button type="button" onClick={openCookieBanner}>
+                Preferenze cookie
+              </button>
             </li>
           </ul>
         </div>
